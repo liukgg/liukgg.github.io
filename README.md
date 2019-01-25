@@ -1,3 +1,25 @@
+# liukgg.github.io
+LK's Blog, welcome to liukgg.github.io!
+
+# 主题
+## 技术类
+- Golang
+- Docker
+- K8s
+- Shell
+- 其他：Tracing(Jaeger/Zipkin), Prometheus, Grafana, Istio, etc.
+- Ruby
+- 数据库
+  * MySQL
+  * MongoDB
+  * Redis
+  
+## 杂谈
+- 技术管理
+- 招聘面试
+- 人生感悟
+- 学习成长
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/liukgg/liukgg.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
