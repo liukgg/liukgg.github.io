@@ -15,10 +15,10 @@ LK's Blog, welcome to liukgg.github.io!
   * Redis
   
 ## 杂谈
-- 技术管理
-- 招聘面试
 - 人生感悟
 - 学习成长
+- 技术管理
+- 招聘面试
 
 ## Welcome to GitHub Pages
 
