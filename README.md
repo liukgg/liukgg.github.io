@@ -1,8 +1,8 @@
 # liukgg.github.io
-LK's Blog, welcome to liukgg.github.io!
+LK's Blog, welcome to https://liukgg.github.io!
 
 ### 2019
-- [Markdown语法](https://guides.github.com/features/mastering-markdown/)
+- [2019-1-26 Markdown语法](https://guides.github.com/features/mastering-markdown/)
 - AWK
 
 ### 主题
