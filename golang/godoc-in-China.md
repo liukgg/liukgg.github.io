@@ -36,3 +36,6 @@ func Abs(x float64) float64
 https://github.com/astaxie/godoc
 
 ### 方法四：“科学上网”，然后访问：https://golang.org/doc/
+
+### 文章推荐：Go语言究竟好在哪里？
+https://www.infoq.cn/article/jqrMtm15lmCP_lNCJPk3
