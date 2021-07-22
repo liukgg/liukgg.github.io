@@ -109,6 +109,9 @@ theme: hexo-theme-matery
 deploy:
   type: ''
 
+search:
+  path: search.xml
+  field: post
 
 # 友情链接：
 # https://jimxl.github.io/
