@@ -117,6 +117,23 @@ permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
 
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
 # 友情链接：
 # https://jimxl.github.io/
 # 赖林，jingwei
