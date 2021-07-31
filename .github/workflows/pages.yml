@@ -3,7 +3,8 @@ name: Pages
 on:
   push:
     branches:
-      - source  # default branch
+      - master
+      #- source  # default branch
 
 jobs:
   pages:
