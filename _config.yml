@@ -98,10 +98,9 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 #theme: landscape
-#theme: auto
-  # 两个不错的主题：
-  # https://github.com/wizardforcel/hexo-theme-landfarz
-  # https://github.com/blinkfox/hexo-theme-matery
+# 两个不错的主题：
+# https://github.com/wizardforcel/hexo-theme-landfarz
+# https://github.com/blinkfox/hexo-theme-matery
 theme: hexo-theme-matery
 
 # Deployment
@@ -136,5 +135,5 @@ feed:
 
 # 友情链接：
 # https://jimxl.github.io/
-# 赖林，jingwei
+# mohuishou，jingwei
 # http://lailin.xyz/
