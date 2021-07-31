@@ -1,7 +1,7 @@
 ---
 title: Godoc In China
 date: 2021-07-29 21:15:29
-tags:
+tags: Golang
 ---
 
 如何在国内查看Golang文档
