@@ -1,6 +1,6 @@
 ---
 title: Godoc In China
-date: 2021-07-29 21:15:29
+date: 2021-08-01 09:00:00
 tags: Golang
 ---
 
