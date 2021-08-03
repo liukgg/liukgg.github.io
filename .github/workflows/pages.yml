@@ -1,5 +1,13 @@
 name: Pages
 
+# 注意：需要留意thems/hexo-theme-matery/这个目录里的内容是否存在
+# 如果是在themes目录下git clone hexo-theme-matery，那么push到github的内容里不包含这个目录下的内容，
+# 进而会导致部署后缺失相关静态资源、博客页面打开失败。
+#
+# 处理方式：
+# 复制文件到themes目录下，但是git无法识别到，用以下命令可以解决
+# git rm -r --cached themes
+#
 on:
   push:
     branches:
