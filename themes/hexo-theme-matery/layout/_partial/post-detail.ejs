@@ -190,6 +190,10 @@
         <%- partial('_partial/changyan') %>
     <% } %>
 
+    <% if (theme.twikoo && theme.twikoo.enable) { %>
+        <%- partial('_partial/twikoo') %>
+    <% } %>
+
     <%- partial('_partial/prev-next') %>
 </div>
 
@@ -215,7 +219,7 @@
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 

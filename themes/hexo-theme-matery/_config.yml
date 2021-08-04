@@ -43,9 +43,9 @@ menu:
 # 站点运行开始时间.
 time:
   enable: false
-  year: 2019 # 年份
-  month: 06 # 月份
-  date: 28 # 日期
+  year: 2018 # 年份
+  month: 01 # 月份
+  date: 01 # 日期
   hour: 00 # 小时
   minute: 00 # 分钟
   second: 00 # 秒
@@ -67,7 +67,7 @@ dream:
   enable: true
   showTitle: true
   title: 我的梦想
-  text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+  text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。  ——罗伯·舒乐
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -96,7 +96,8 @@ video:
   enable: false
   showTitle: true
   title: 精彩视频
-  url: # 必填
+  url: # url和iframeUrl其中一个必填
+  iframeUrl: #在bilibili或者爱奇艺分享时选择iframe，然后填那个url来这里，sample: //player.bilibili.com/player.html?aid=669520137&bvid=BV1oa4y1L7mw&cid=234543483&page=1
   pic:
   thumbnails:
   height: # 如：400
@@ -126,17 +127,17 @@ indexbtn:
   enable: true
   name: Github
   icon: fab fa-github-alt
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/liukgg/liukgg.github.io
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  https://github.com/blinkfox
-  email: 1181062873@qq.com
+  github:  https://github.com/liukgg/liukgg.github.io
+  email: 619286529@qq.com
   facebook: # https://www.facebook.com/xxx
   twitter: # https://twitter.com/xxx
-  qq: 1181062873
+  qq: 619286529
   weibo: # https://weibo.com/xxx
   zhihu: # https://www.zhihu.com/xxx
   rss: true # true、false
@@ -190,10 +191,10 @@ mathjax:
 postInfo:
   date: true # 发布日期
   update: false # 更新日期
-  wordCount: false # 文章字数统计
-  totalCount: false # 站点总文章字数
-  min2read: false # 文章阅读时长
-  readCount: false # 文章阅读次数
+  wordCount: true # 文章字数统计
+  totalCount: true # 站点总文章字数
+  min2read: true # 文章阅读时长
+  readCount: true # 文章阅读次数
 
 # Whether to activate the 'love' effect of clicking on the page.
 # 是否激活点击页面的'爱心'效果，默认激活.
@@ -213,21 +214,21 @@ profile:
 myProjects:
   enable: true
   data:
-    hexo-theme-matery:
-      icon: fas fa-file-alt
-      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: http://github.com/blinkfox/hexo-theme-matery
-      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
-    Fenix:
-        icon: fas fa-database
-        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/fenix
-        desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
-    typora-vue-theme:
-        icon: fas fa-file-alt
-        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
-        desc: This is a typora theme inspired by Vue document style.
+    Study Notes:
+      icon: fas fa-database
+      iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+      url: https://github.com/liukgg/study_notes
+      desc: Luck's study notes, about Java/Golang/Ruby/Kubernetes/Architecture/algorithm/Network/OperationSystem, etc.
+    Constellation:
+      icon: fas fa-database
+      iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+      url: https://github.com/liukgg/constellation
+      desc: A Ruby Gem to get constellation from birthday.
+    Smart_attr:
+      icon: fas fa-database
+      iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+      url: https://github.com/liukgg/smart_attr
+      desc: Using this gem, you can extend model attributes. You can set a config for a field and then get many useful methods.
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -237,22 +238,28 @@ mySkills:
   data:
     Java:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
-      percent: 85%
-    JavaScript:
+      percent: 60%
+    Ruby:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
       percent: 80%
-    HTML5:
+    Golang:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
-      percent: 80%
-    CSS:
-      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
-      percent: 70%
+      percent: 60%
     SQL:
       background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
       percent: 90%
-    程序设计:
+    架构设计:
       background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
+      percent: 80%
+    精益敏捷开发管理:
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
+      percent: 80%
+    Kubernetes&Docker:
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
       percent: 75%
+    CI/CD:
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
+      percent: 80%
 
 # config gallery of my photos in about page.
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
@@ -272,7 +279,7 @@ postCalendar: true
 
 # https://github.com/utterance/utterances 是个 GitHub App，它的权限仅限于某个仓库。像 hugo hexo 这种静态页面类型的博客，clientID/clientSecret 泄露是不可避免的。我认为较好的解决方式是像 utteras 这种 GitHubApp，只有一个仓库的读写权限，将破坏降到最小。
 
-# valine和minivaline都是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
+# valine是使用的免费的leancloud开发版资源，即使数据丢了leancloud也不用负任何的责任。此外valine的src目录已在1.4.0后停止更新。。。薛定谔的开源。
 
 # 当初多说国内最大都倒了，livere不一定靠谱。
 
@@ -327,50 +334,18 @@ valine:
   pageSize: 10
   placeholder: 'just go go' # Comment Box placeholder
   background: /medias/comment_bg.png
+  coolpushkey: 
 
 # The configuration of the MiniValine comment module is not activated by default.
-# To use it, activate the configuration item and set appId and appKey.
-# MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
+# To use it, activate the configuration item.
+# MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项
 # See: https://github.com/MiniValine/MiniValine
 minivaline:
   enable: false
-  appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
-  appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
-  mode: DesertsP # DesertsP or xCss
-  placeholder: Write a Comment # Comment box placeholder
-  math: true # Support MathJax.
-  md: true # Support Markdown.
-  enableQQ: false # Enable QQ avatar API.
-  NoRecordIP: false # Do not record commenter IP.
-  visitor: true # Article reading statistics.
-  maxNest: 6 # Sub-comment maximum nesting depth.
-  pageSize: 6 # Pagination size.
-  adminEmailMd5: de8a7aa53d07e6b6bceb45c64027763d # The MD5 of Admin Email to show Admin Flag.[Just Only DesertsP Style mode]
-  tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
-    - 管理员
-    - 小伙伴
-    - 访客
-  master: # The MD5 String Array of master Email to show master Flag.[Just Only xCss Style mode]
-    - de8a7aa53d07e6b6bceb45c64027763d
-  friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
-    - b5bd5d836c7a0091aa8473e79ed4c25e
-    - adb7d1cd192658a55c0ad22a3309cecf
-    - 3ce1e6c77b4910f1871106cb30dc62b0
-    - cfce8dc43725cc14ffcd9fb4892d5bfc
-  # MiniValine's display language depends on user's browser or system environment
-  # If you want everyone visiting your site to see a uniform language, you can set a force language value
-  # Available values: en  | zh-CN | (and many more)
-  # More i18n info: https://github.com/MiniValine/minivaline-i18n
-  lang:
-  # Expression Url.
-  # https://github.com/MiniValine/MiniValine/blob/master/.github/FAQ.md#how-to-customize-emoticons
-  emoticonUrl:
-    - https://cdn.jsdelivr.net/npm/alus@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/qq@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest
-    - https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest
+  # 更多选项 https://minivaline.js.org/docs/cn/#/Options 按照yml格式继续填写即可 （除了 [el] 选项）  
+  # emoticonUrl 等列表选项 可参考 https://github.com/MiniValine/hexo-next-minivaline
+  # 下面是一个例子：
+  serverURL: https://minivaline.your-domain.top
 
 changyan:
   enable: false
@@ -380,8 +355,18 @@ changyan:
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
   enable: true
-  url: https://github.com/blinkfox/hexo-theme-matery
+  url: https://github.com/liukgg/liukgg.github.io
   title: Fork Me
+
+# The configuration of the Twikoo comment module is not activated by default.
+# To use it, activate the configuration item and set envId.
+# Twikoo 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置环境 ID envId.
+# See: https://twikoo.js.org
+twikoo:
+  enable: false
+  envId: twikoo-1gs9l0fb17e7897a # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
+  # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
+  # path: 'window.location.pathname' # 自定义文章路径
 
 # The password verification feature of read post. To use this feature,
 # activate the configuration item and write the 'password' key and Cipher in the post's Front-matter.
@@ -451,7 +436,8 @@ libs:
     echarts: /libs/echarts/echarts.min.js
     gitalk: /libs/gitalk/gitalk.min.js
     valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
-    minivaline: /libs/minivaline/MiniValine.js
+    minivaline: /libs/minivaline/MiniValine.js # latest
+    twikoo: /libs/twikoo/twikoo.all.min.js # 若想保持最新版，请替换为 https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js  默认为 /libs/twikoo/twikoo.all.min.js
     jqcloud: /libs/jqcloud/jqcloud-1.0.4.min.js
     tocbot: /libs/tocbot/tocbot.min.js
     canvas_nest: /libs/background/canvas-nest.js
@@ -566,8 +552,9 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: 从来没有真正的绝境, 只有心灵的迷途
-  sub2: Never really desperate, only the lost of the soul
+  sub:
+    - 从来没有真正的绝境, 只有心灵的迷途
+    - Never really desperate, only the lost of the soul
 
 # 手机二级菜单.
 navMenu:
