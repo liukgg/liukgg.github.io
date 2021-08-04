@@ -2,6 +2,7 @@
 title: Godoc In China
 date: 2021-08-01 09:00:00
 tags: Golang
+categories: Golang编程语言
 ---
 
 如何在国内查看Golang文档
