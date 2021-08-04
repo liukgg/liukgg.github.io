@@ -12,7 +12,7 @@ on:
   push:
     branches:
       - master
-      - dev
+        # - dev
 
 jobs:
   pages:
