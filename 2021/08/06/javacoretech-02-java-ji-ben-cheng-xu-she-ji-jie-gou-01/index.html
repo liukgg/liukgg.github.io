@@ -556,7 +556,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>警告: 在 Java 中， /* <em>/ 注释不能嵌套。也就是说，不能简单地把代码用 /</em> 和 */ 括起来<br>作为注释， 因为这段代码本身可能也包含一个 */ ,</li>
+<li>警告: 在 Java 中， /* */ 注释不能嵌套。也就是说，不能简单地把代码用 /* 和 */ 括起来<br>作为注释， 因为这段代码本身可能也包含一个 */ .</li>
 </ul>
 </li>
 </ul>
@@ -576,11 +576,38 @@
 <ul>
 <li>字节数从少到多依次是：byte，short，int，long</li>
 </ul>
-<p>类型|存储需求|取值范围</p>
-<pre><code> |----|----|----|
-</code></pre>
-<p>int|4字节|-2 147 483 648 ～ 2 147 483 647 ( 正好超过 20 亿 )<br>short|2字节|-32 768 ～ 32 767<br>long|8字节|-9223372036854775B08 ～ 9223372036854775807<br>byte|1字节|-128 ～ 127</p>
-</li>
+  <br>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储需求</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>4字节</td>
+<td>-2 147 483 648 ～ 2 147 483 647 ( 正好超过 20 亿 )</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2字节</td>
+<td>-32 768 ～ 32 767</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8字节</td>
+<td>-9223372036854775B08 ～ 9223372036854775807</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>1字节</td>
+<td>-128 ～ 127</td>
+</tr>
+</tbody></table>
+  <br></li>
 <li><p>在通常情况下，int类型最常用。</p>
 </li>
 <li><p>byte 和 short 类型主要用于特定的应用场合。</p>
@@ -623,11 +650,28 @@
 </ul>
 <h5 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h5><ul>
 <li><p>浮点类型用于表示有小数部分的数值。在 Java 中有两种浮点类型。</p>
-<p>类型|存储需求|取值范围</p>
-<pre><code>|----|----|----|
-</code></pre>
-<p>float|4字节|大约 ± 3.402 823 47E+38F (有效位数为 6 ~ 7 位)<br>double|8字节|大约 ± 1.797 693 134 862 315 70E+308 (有效位数为 15 位&gt;</p>
-</li>
+<br>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存储需求</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4字节</td>
+<td>大约 ± 3.402 823 47E+38F (有效位数为 6 ~ 7 位)</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8字节</td>
+<td>大约 ± 1.797 693 134 862 315 70E+308 (有效位数为 15 位&gt;</td>
+</tr>
+</tbody></table>
+<br></li>
 <li><p>double 表示这种类型的数值精度是 float 类型的两倍(有人称之为双精度数值)。</p>
 </li>
 <li><p><strong>绝大部分应用程序都采用 double 类型。</strong></p>
@@ -714,7 +758,7 @@
 <li>变量名的长度基本上没有限制。</li>
 <li>提示: 如果想要知道哪些 Unicode 字符属于 Java 中的“ 字母”， 可以使用 Character 类的 isJavaldentifierStart 和 isJavaldentifierPart 方法来检查。</li>
 <li>不能使用 Java 保留字作为变量名。</li>
-<li>可以在一行中声明多个变量。不过，不提倡使用这种风格。逐一声明每一个变量可以提高程序的可读性。<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> i<span class="token punctuation">,</span> •<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// both are integers</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li>可以在一行中声明多个变量。不过，不提倡使用这种风格。逐一声明每一个变量可以提高程序的可读性。<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span> <span class="token comment">// both are integers</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h5 id="变量初始化"><a href="#变量初始化" class="headerlink" title="变量初始化"></a>变量初始化</h5></li>
 <li>声明一个变量之后，必须用赋值语句对变量进行显式初始化，千万不要使用未初始化的变量。</li>
 <li>例如， Java 编译器认为下面的语句序列是错误的:<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> vacationDays<span class="token punctuation">;</span>
@@ -781,7 +825,7 @@ vacationDays <span class="token operator">=</span> <span class="token number">12
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Luck</a>
+                    <a href="/about" rel="external nofollow noreferrer">LuckLiu</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -804,7 +848,7 @@ vacationDays <span class="token operator">=</span> <span class="token number">12
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Luck</a>
+                    <a href="/about" target="_blank">LuckLiu</a>
                     !
                 </span>
             </div>
@@ -1291,7 +1335,7 @@ vacationDays <span class="token operator">=</span> <span class="token number">12
                 <span id="year">2018-2021</span>
             
             <span id="year">2018</span>
-            <a href="/about" target="_blank">Luck</a>
+            <a href="/about" target="_blank">LuckLiu</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
