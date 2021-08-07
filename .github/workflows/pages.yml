@@ -48,4 +48,53 @@ jobs:
           endpoint: oss-cn-hongkong.aliyuncs.com
           access-key-id: ${{ secrets.ALIYUN_ID }}
           access-key-secret: ${{ secrets.ALIYUN_SECRET }}
-      - run: ossutil cp -f -u -r -j 100 --exclude ".git*" --meta=Cache-Control:max-age=86400 public/ oss://goodluck-lk/
+      - run: ossutil cp -f -u -r -j 100 --exclude ".git*" --meta=Cache-Control:max-age=86400 public/ oss://goodluck-hk/
+
+
+#build:
+#    if: always() && (needs.yuque.result == 'skipped' || needs.yuque.result == 'success')
+#    needs: yuque
+#    runs-on: ubuntu-latest
+#    steps:
+#      # 安装环境
+#      - uses: actions/checkout@v2
+#        with:
+#          ref: 'master' # 永远获取最新的，避免上一步推送了数据获取不到
+#          submodules: true
+#      - uses: actions/setup-node@v2
+#        with:
+#          node-version: '12'
+#      - name: cache node modules
+#        uses: actions/cache@v2
+#        with:
+#          path: ./node_modules
+#          key: node_modules
+#      - name: install dependence
+#        run: |
+#          npm i
+#
+#      - name: generate
+#        run: |
+#          npx hexo g
+#
+#      - name: deploy oss
+#        uses: manyuanrong/setup-ossutil@v2.0
+#        with:
+#          endpoint: oss-cn-hangzhou.aliyuncs.com
+#          access-key-id: ${{ secrets.ALI_ID }}
+#          access-key-secret: ${{ secrets.ALI_SECRET }}
+#      - run: ossutil cp -f -u -r -j 100 --exclude ".git*" --meta=Cache-Control:max-age=86400 public/ oss://lailin-xyz/
+#
+#      - name: git setting
+#        run: |
+#          git config --global user.email "1@lailin.xyz"
+#          git config --global user.name "mohuishou"
+#
+#      - name: deploy github
+#        run: |
+#          git clone --recursive https://mohuishou:${{ secrets.TOKEN }}@github.com/mohuishou/mohuishou.github.io.git dist
+#          cp -rf dist/.git public/
+#          cd public
+#          git add .
+#          git commit -m "feat: auto update by yuque sync"
+#          git push
