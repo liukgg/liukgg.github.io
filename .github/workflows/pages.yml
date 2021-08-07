@@ -34,9 +34,18 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Deploy
+
+      - name: Deploy Github
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages # master  # gh-pages # deploying branch
+
+      - name: deploy oss
+        uses: manyuanrong/setup-ossutil@v2.0
+        with:
+          endpoint: oss-cn-hongkong.aliyuncs.com
+          access-key-id: ${{ secrets.ALIYUN_ID }}
+          access-key-secret: ${{ secrets.ALIYUN_SECRET }}
+      - run: ossutil cp -f -u -r -j 100 --exclude ".git*" --meta=Cache-Control:max-age=86400 public/ oss://goodluck-lk/
