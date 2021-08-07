@@ -6,7 +6,7 @@
   <link href="https://liukgg.github.io/atom.xml" rel="self"/>
   
   <link href="https://liukgg.github.io/"/>
-  <updated>2021-08-04T04:23:10.022Z</updated>
+  <updated>2021-08-07T03:24:54.869Z</updated>
   <id>https://liukgg.github.io/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaCoreTech-02-Java基本程序设计结构01</title>
+    <link href="https://liukgg.github.io/2021/08/06/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/"/>
+    <id>https://liukgg.github.io/2021/08/06/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/</id>
+    <published>2021-08-06T16:23:29.000Z</published>
+    <updated>2021-08-07T03:24:54.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Java的基本程序设计结构（1）——示例、注释、数据类型、变量&quot;&gt;&lt;a href=&quot;#Java的基本程序设计结构（1）——示例、注释、数据类型、变量&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://liukgg.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://liukgg.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaCoreTech-01-Java关键特性</title>
+    <link href="https://liukgg.github.io/2021/08/06/javacoretech-01-java-guan-jian-te-xing/"/>
+    <id>https://liukgg.github.io/2021/08/06/javacoretech-01-java-guan-jian-te-xing/</id>
+    <published>2021-08-06T10:27:35.000Z</published>
+    <updated>2021-08-07T03:24:54.869Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Java关键特性&quot;&gt;&lt;a href=&quot;#Java关键特性&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://liukgg.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://liukgg.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《影响力密码》学习笔记</title>
     <link href="https://liukgg.github.io/2021/08/01/ying-xiang-li-mi-ma-xue-xi-bi-ji/"/>
     <id>https://liukgg.github.io/2021/08/01/ying-xiang-li-mi-ma-xue-xi-bi-ji/</id>
     <published>2021-08-01T10:00:00.000Z</published>
-    <updated>2021-08-04T04:23:10.022Z</updated>
+    <updated>2021-08-07T03:24:54.869Z</updated>
     
     
       
@@ -34,6 +84,8 @@
     
     
     
+    <category term="团队协作与管理" scheme="https://liukgg.github.io/categories/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E4%B8%8E%E7%AE%A1%E7%90%86/"/>
+    
     
     <category term="Work" scheme="https://liukgg.github.io/tags/Work/"/>
     
@@ -44,7 +96,7 @@
     <link href="https://liukgg.github.io/2021/08/01/godoc-in-china/"/>
     <id>https://liukgg.github.io/2021/08/01/godoc-in-china/</id>
     <published>2021-08-01T09:00:00.000Z</published>
-    <updated>2021-08-04T04:23:10.022Z</updated>
+    <updated>2021-08-07T03:24:54.869Z</updated>
     
     
       
@@ -57,6 +109,8 @@
     
     
     
+    <category term="Golang编程语言" scheme="https://liukgg.github.io/categories/Golang%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
     
     <category term="Golang" scheme="https://liukgg.github.io/tags/Golang/"/>
     
@@ -67,7 +121,7 @@
     <link href="https://liukgg.github.io/2021/08/01/can-kao-zi-liao/"/>
     <id>https://liukgg.github.io/2021/08/01/can-kao-zi-liao/</id>
     <published>2021-08-01T08:00:00.000Z</published>
-    <updated>2021-08-04T04:23:10.022Z</updated>
+    <updated>2021-08-07T03:24:54.869Z</updated>
     
     
       
@@ -80,6 +134,8 @@
     
     
     
+    <category term="参考资料" scheme="https://liukgg.github.io/categories/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/"/>
+    
     
     <category term="Reference" scheme="https://liukgg.github.io/tags/Reference/"/>
     
@@ -90,7 +146,7 @@
     <link href="https://liukgg.github.io/2021/08/01/hello-world/"/>
     <id>https://liukgg.github.io/2021/08/01/hello-world/</id>
     <published>2021-08-01T06:00:00.000Z</published>
-    <updated>2021-08-04T04:23:10.022Z</updated>
+    <updated>2021-08-07T03:24:54.869Z</updated>
     
     
       
@@ -102,6 +158,8 @@
       
     
     
+    
+    <category term="参考资料" scheme="https://liukgg.github.io/categories/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/"/>
     
     
     <category term="Reference" scheme="https://liukgg.github.io/tags/Reference/"/>
