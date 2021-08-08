@@ -8,7 +8,9 @@ categories: Java
 关于equals方法
 -----------
 
->参考 Java核心技术卷I 第5章 继承 5.2.2 equals方法
+> 参考 Java核心技术卷I 第5章 继承 5.2.2 equals方法
+> 参考：https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
+> 参考: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
 
 ### equals方法概述
 Object类中的euqals方法用于检测一个对象是否等于另外一个对象。
@@ -21,7 +23,7 @@ equals方法与==比较：
 - Object.equals里的内部实现，其实还是调用的==
 - 在自定义的类中一般会重写 Object.equals 方法，这时一般是根据业务逻辑来判断两个对象是否相等、而不是直接看两者是否是同一个对象。
 
-### 关于 Object, String, Array 类中equals方法源码
+### 阅读学习 Object, String, Array 类中equals方法源码
 根据Java API官方文档可知，Object.equals 方法实际上是判断两个对象是否是同一个对象。
 也就是说，对于任意两个非空的对象（引用）x和y，当且仅当x和y指向同一个对象时才会返回true。
 实际上，从源码可知， Object.equals 方法本质上就是判断 x == y。
@@ -113,11 +115,7 @@ final class StringLatin1 {
 // final class StringUTF16 类中实现类似，不再赘述。
 ```
 
-### 自定义equals方法代码示例
-
-### 如何自定义equals方法
-
-### 关于String判断相等
+### String判断相等的方法与注意事项
 注意事项：
 可以用equals方法检测两个字符串是否相等。例如：
 
@@ -140,3 +138,156 @@ greeting.subString(0, 3) == "hel"; //false
 说明：
 如果虚拟机始终将相同的字符串共享，就可以使用==运算符检测是否相等。但实际上只有字符串字面量是共享的，而 + 或 subString 等操作得到的字符串并不
 共享。因此，千万不要使用 == 运算符测试字符串的相等性，以免在程序中出现这种最糟糕的bug，看起来这种bug就像随机产生的间歇性错误。
+
+### 自定义equals方法代码示例
+为了更好地展示equals方法的定义，Employee类做了一些简化，只保留了id和name两个字段，
+实际业务场景下一般会有更多字段，但是判断是否相等一般还是比较id。
+
+从以下代码示例可以看出，实际上自定义类的equals方法定义和String中的equals方法定义是类似的。
+因此，JDK中实际上有大量优秀源码实现，我们可以经常去探索和学习。
+（除了 String.equals方法，还有一个很值得学习的是 Arrays.sort方法，里面对于排序算法的选择和实现很精巧、值得推敲和学习。）
+
+```java
+public class Employee {
+  private  int id;
+  private String name;
+
+  public Employee(int id, String name) {
+    this. id = id;
+    this.name = name;
+  }
+
+  public boolean equals(Object otherObject) {
+    if (this == otherObject) return true;
+    if (otherObject == null) return false;
+    if (getClass() != otherObject.getClass()) return false;
+
+    Employee other = (Employee) otherObject;
+
+    return id == other.id;
+  }
+}
+
+public class EmployeeTest {
+  public static void main(String[] args) {
+    Employee a = new Employee(1, "abc");
+    Employee b = new Employee(1, "abc");
+    Employee c = new Employee(2, "abc");
+    System.out.println(a.equals(b)); // true
+    System.out.println(a.equals(c)); // false
+    System.out.println(a == b); // false, a 和 b的id相等，所以根据我们的equals方法定义来看是相等的；但是==比较的是引用地址，由于a和b不是同一个对象，所以返回false
+    System.out.println(a == c); // false
+  }
+}
+
+```
+
+### 如何自定义equals方法
+##### Java语言规范要求
+Java语言规范要求equals方法具有以下特性：
+-  1 ) 自反性: 对于任何非空引用 x, x.equals(?0 应该返回 truec
+-  2 ) 对称性: 对于任何引用 x 和 y, 当且仅当 y.equals(x) 返回 true, x.equals(y) 也应该返 回 true。
+-  3 ) 传递性: 对于任何引用 x、 y 和 z, 如果 x.equals(y) 返 N true， y.equals(z) 返回 true, x.equals(z) 也应该返回 true。
+-  4 ) 一致性: 如果 x 和 y 引用的对象没有发生变化， 反复调用 x.eqimIS(y) 应该返回同样 的结果。
+-  5 ) 对于任意非空引用 x, x.equals(null) 应该返回 false,
+
+  这些规则十分合乎情理， 从而避免了类库实现者在数据结构中定位一个元素时还要考虑 调用 x.equals(y), 还是调用 y.equals(x) 的问题。
+
+这些内容在 Object.euqals 方法的文档中也有提到：
+
+> https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
+> 
+> public boolean equals(Object obj)
+> Indicates whether some other object is "equal to" this one.
+> The equals method implements an equivalence relation on non-null object references:
+> 
+> It is reflexive: for any non-null reference value x, x.equals(x) should return true.
+> It is symmetric: for any non-null reference values x and y, x.equals(y) should return true if and only if y.equals(x) returns true.
+> It is transitive: for any non-null reference values x, y, and z, if x.equals(y) returns true and y.equals(z) returns true, then x.equals(z) should return true.
+> It is consistent: for any non-null reference values x and y, multiple invocations of x.equals(y) consistently return true or consistently return false, provided no information used in equals comparisons on the objects is modified.
+> For any non-null reference value x, x.equals(null) should return false.
+> The equals method for class Object implements the most discriminating possible equivalence relation on objects; that is, for any non-null reference values x and y, this method returns true if and only if x and y refer to the same object (x == y has the value true).
+> 
+> Note that it is generally necessary to override the hashCode method whenever this method is overridden, so as to maintain the general contract for the hashCode method, which states that equal objects must have equal hash codes.
+
+##### 下面给出编写一个完美的 equals 方法的建议：
+1) 显式参数命名为 otherObject, 稍后需要将它转换成另一个叫做 other 的变量。 
+
+2) 检测 this 与 otherObject 是否引用同一个对象:
+    if (this = otherObject) return true;
+
+    这条语句只是一个优化。 实际上， 这是一种经常采用的形式。 因为计算这个等式要比一 个一个地比较类中的域所付出的代价小得多。
+
+3) 检测 otherObject 是否为 null , 如 果 为 null , 返 回 false。 这项检测是很必要的。 if (otherObject = null) return false;
+
+4) 比较 this 与 otherObject 是否属于同一个类。如果 equals 的语义在每个子类中有所改 变， 就使用 getClass 检测:
+    if (getClass() != otherObject.getCIassO) return false;
+
+    如果所有的子类都拥有统一的语义， 就使用 instanceof 检测: 
+    if (!(otherObject instanceof ClassName)) return false;
+
+5) 将 otherObject 强制转换为相应的类类型变量: 
+   
+   ClassName other = (ClassName) otherObject
+  
+   因为传入的参数是 Object 对象类型，因此这里必须要做强制类型转换。否则otherObject无法调用Employee类的方法。
+
+6）现在开始对所有需要比较的域进行比较了。使用= 比较基本类型域，使用equals比 较对象域。如果所有的域都匹配，就返回true; 否则返回false。
+
+  return fieldl == other.field && Objects.equa1s(fie1d2, other.field2)
+
+  如果在子类中重新定义equals, 就要在其中包含调用super.equals(other。)
+
+##### 参考案例：
+
+```java
+
+public class Employee {
+    private  int id;
+    private String name;
+
+    public Employee(int id, String name) {
+        this. id = id;
+        this.name = name;
+    }
+
+    public boolean equals(Object otherObject) {
+        if (this == otherObject) return true;
+        if (otherObject == null) return false;
+        if (getClass() != otherObject.getClass()) return false;
+
+        Employee other = (Employee) otherObject;
+
+        return id == other.id;
+    }
+}
+```
+
+##### 常见错误
+下面代码有什么问题呢？
+
+```java
+public class Employee {
+    public boolean equals(Employee other) {
+        return other != null
+                && getClassO == other.getClass0
+                && Objects.equals(name, other.name)
+                && salary —other, sal ary
+                && Objects.equals(hireDay, other.hireDay);
+    }
+}
+```
+
+这个方法声明的显式参数类型是 Employee。 
+其结果并没有覆盖 Object 类的 equals 方 法， 而是定义了一个完全无关的方法。
+
+为了避免发生类型错误， 可以使用 @Override 对覆盖超类的方法进行标记: 
+```java
+@Override public boolean equals(Object other)
+```
+
+如果出现了错误， 并且正在定义一个新方法， 编译器就会给出错误报告。 例如， 假设将下面的声明添加到 Employee 类中:
+
+@Override public boolean equals(Employee other)
+
+就会看到一个错误报告， 这是因为这个方法并没有覆盖超类 Object 中的任何方法。
