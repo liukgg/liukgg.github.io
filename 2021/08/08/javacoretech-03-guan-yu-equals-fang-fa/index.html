@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    13 分
                 </div>
                 
 
@@ -700,6 +700,17 @@ greeting<span class="token punctuation">.</span><span class="token function">sub
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h5 id="关于equals方法的补充说明"><a href="#关于equals方法的补充说明" class="headerlink" title="关于equals方法的补充说明"></a>关于equals方法的补充说明</h5><p>有些作者认为不应该利用 getClass 检测， 因为这样不符合置换原则。</p>
+<p>有一个应用 AbstractSet 类的 equals 方法的典型例子， 它将检测两个集合是否有相同的元素。<br>AbstractSet 类有两个具体子类: TreeSet 和 HashSet, 它们分别使用不同的算法实现查找集合元素的操作。<br>无论集合采用何种方式实现， 都需要拥有对任意两个集合进行比较的功能。</p>
+<p>然而， 集合是相当特殊的一个例子， 应该将 AbstractSetequals 声明为 final , 这是因为没有任何一个子类需要重定义集合是否相等的语义。<br>(事实上， 这个方法并没有被声明为 final. 这样做， 可以让子类选择更加有效的算法对集合进行是否相等的检测。)</p>
+<p>下面可以从两个截然不同的情况看一下这个问题: </p>
+<ul>
+<li>如果子类能够拥有自己的相等概念， 则对称性需求将强制采用 getClass 进行检测</li>
+<li>如果由超类决定相等的概念， 那么就可以使用 instanceof 进行检测， 这样可以在不同子类的对象之间进行相等的比较。</li>
+</ul>
+<p>在雇员和经理的例子中（Manager 继承自 Employee，详见 Java核心技术卷1 5.2.3）， 只要对应的域相等， 就认为两个对象相等。<br>如果两个 Manager 对象所对应的姓名、 薪水和雇佣日期均相等， 而奖金不相等， 就认为它们是不相同的， 因此， 可以使用 getClass 检测。</p>
+<p>但是，假设使用雇员的 ID 作为相等的检测标准， 并且这个相等的概念适用于所有的子类， 就可以使用 instanceof 进行检测， 并应该将 Employee.equals 声明为 final。</p>
+<p><em>注：本文中的例子为了更好地帮助理解，做了一些简化，假定用ID作为相等的检测标准，且不适用于子类，因此还是用 getClass 做检测。</em></p>
 <h5 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h5><p>下面代码有什么问题呢？</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Employee</span> other<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1248,7 +1259,7 @@ greeting<span class="token punctuation">.</span><span class="token function">sub
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">10.7k</span>
+                        class="white-color">11.2k</span>
             
             
             
