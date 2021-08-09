@@ -9,18 +9,18 @@ categories: Java
 -----------
 
 > 参考 Java核心技术卷I 第5章 继承 5.2.2 equals方法
-> 参考：https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
+> 参考: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
 > 参考: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
 
 ### equals方法概述
 Object类中的euqals方法用于检测一个对象是否等于另外一个对象。
 
-equals方法与==比较：
+equals方法与 == 的区别与联系：
 
-- ==来判断两个变量是否相等，但是会根据数据类型有所区别：
-  - 对于8种基础数据类型（byte、short、int、long、double、float、boolean、char）来说==是判断变量的数值是否相等。
-  - 对于引用类型，==比较的是引用的地址是否相等 
-- Object.equals里的内部实现，其实还是调用的==
+- == 用来判断两个变量是否相等，但是会根据数据类型有所区别：
+  - 对于8种基础数据类型（byte、short、int、long、double、float、boolean、char）来说, == 是判断变量的数值是否相等。
+  - 对于引用类型，== 比较的是引用的地址是否相等。 
+- Object.equals 里的内部实现，其实还是调用的==.
 - 在自定义的类中一般会重写 Object.equals 方法，这时一般是根据业务逻辑来判断两个对象是否相等、而不是直接看两者是否是同一个对象。
 
 ### 阅读学习 Object, String, Array 类中equals方法源码
@@ -31,12 +31,12 @@ equals方法与==比较：
 结论：对于自定义的类，一般来说都需要重定义 equals 方法以覆盖Object.equals方法。
 例如，比较常见的一种做法是，当类存在数据库且有主键ID的时候，经常会通过判断两个对象的ID是否相等来比较是否相等。
 
-> String 类中重写了 equals 方法
-> 声明一个整型数组，查看其equals方法，会发现实际上就是 Object.equals 方法
+> String 类中重写了 equals 方法；
+> 声明一个整型数组，查看其equals方法，会发现实际上就是 Object.equals 方法;
 > java.util.Arrays 中实现了多个不同参数的equals方法，例如 equals(int [] a, int[] b)，但是这已经和Object.equals方法有本质区别了。
 
-- 以下为JDK 11中Object.equals方法的源码:(JDK 1.8 相同)
-> 参考： https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
+- 以下为JDK 11中 Object.equals 方法的源码: (JDK 1.8 相同)
+> 参考: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html
 
 ```java
 /**
@@ -59,7 +59,7 @@ public class Object{
 }
 ```
 
-- String.equals方法源码：
+- String.equals 方法源码：
 
 ```java
 public final class String
@@ -82,19 +82,19 @@ public final class String
  * @see  #compareTo(String)
  * @see  #equalsIgnoreCase(String)
  */
-public boolean equals(Object anObject) {
-    if (this == anObject) {
-      return true;
-    }
-    if (anObject instanceof String) {
-      String aString = (String)anObject;
-      if (coder() == aString.coder()) {
-        return isLatin1() ? StringLatin1.equals(value, aString.value)
-                : StringUTF16.equals(value, aString.value);
+    public boolean equals(Object anObject) {
+        if (this == anObject) {
+          return true;
+        }
+        if (anObject instanceof String) {
+          String aString = (String)anObject;
+          if (coder() == aString.coder()) {
+            return isLatin1() ? StringLatin1.equals(value, aString.value)
+                    : StringUTF16.equals(value, aString.value);
+          }
+        }
+        return false;
       }
-    }
-    return false;
-  }
 }
 
 final class StringLatin1 {
@@ -115,8 +115,7 @@ final class StringLatin1 {
 // final class StringUTF16 类中实现类似，不再赘述。
 ```
 
-### String判断相等的方法与注意事项
-注意事项：
+### String 判断相等的方法与注意事项
 可以用equals方法检测两个字符串是否相等。例如：
 
 ```java 
@@ -126,7 +125,9 @@ s.equals(t); // true
 s.subString(0, 3).equals("hel"); // true
 ```
 
-一定不要使用 == 运算符检测两个字符串是否相等！这个运算符只能够确定两个字符串是否存放在同一个位置上。当然，如果字符串在同一个位置上，它们必然相等。
+一定不要使用 == 运算符检测两个字符串是否相等！
+这个运算符只能够确定两个字符串是否存放在同一个位置上。
+当然，如果字符串在同一个位置上，它们必然相等。
 但是，完全有可能将内容相同的多个字符串副本放置在不同的位置上。
 
 ```java
@@ -136,8 +137,9 @@ greeting.subString(0, 3) == "hel"; //false
 ```
 
 说明：
-如果虚拟机始终将相同的字符串共享，就可以使用==运算符检测是否相等。但实际上只有字符串字面量是共享的，而 + 或 subString 等操作得到的字符串并不
-共享。因此，千万不要使用 == 运算符测试字符串的相等性，以免在程序中出现这种最糟糕的bug，看起来这种bug就像随机产生的间歇性错误。
+如果虚拟机始终将相同的字符串共享，就可以使用==运算符检测是否相等。
+但实际上只有字符串字面量是共享的，而 + 或 subString 等操作得到的字符串并不共享。
+因此，千万不要使用 == 运算符测试字符串的相等性，以免在程序中出现这种最糟糕的bug，看起来这种bug就像随机产生的间歇性错误。
 
 ### 自定义equals方法代码示例
 为了更好地展示equals方法的定义，Employee类做了一些简化，只保留了id和name两个字段，
@@ -145,7 +147,7 @@ greeting.subString(0, 3) == "hel"; //false
 
 从以下代码示例可以看出，实际上自定义类的equals方法定义和String中的equals方法定义是类似的。
 因此，JDK中实际上有大量优秀源码实现，我们可以经常去探索和学习。
-（除了 String.equals方法，还有一个很值得学习的是 Arrays.sort方法，里面对于排序算法的选择和实现很精巧、值得推敲和学习。）
+例如，除了 String.equals 方法，还有一个很值得学习的是 Arrays.sort方法，里面对于排序算法的选择和实现很精巧、值得推敲和学习。
 
 ```java
 public class Employee {
@@ -185,13 +187,13 @@ public class EmployeeTest {
 ### 如何自定义equals方法
 ##### Java语言规范要求
 Java语言规范要求equals方法具有以下特性：
--  1 ) 自反性: 对于任何非空引用 x, x.equals(?0 应该返回 truec
--  2 ) 对称性: 对于任何引用 x 和 y, 当且仅当 y.equals(x) 返回 true, x.equals(y) 也应该返 回 true。
--  3 ) 传递性: 对于任何引用 x、 y 和 z, 如果 x.equals(y) 返 N true， y.equals(z) 返回 true, x.equals(z) 也应该返回 true。
--  4 ) 一致性: 如果 x 和 y 引用的对象没有发生变化， 反复调用 x.eqimIS(y) 应该返回同样 的结果。
--  5 ) 对于任意非空引用 x, x.equals(null) 应该返回 false,
+-  1 ) 自反性: 对于任何非空引用 x, x.equals(x) 应该返回 true.
+-  2 ) 对称性: 对于任何引用 x 和 y, 当且仅当 y.equals(x) 返回 true, x.equals(y) 也应该返回 true。
+-  3 ) 传递性: 对于任何引用 x、 y 和 z, 如果 x.equals(y) 返 true， y.equals(z) 返回 true, x.equals(z) 也应该返回 true。
+-  4 ) 一致性: 如果 x 和 y 引用的对象没有发生变化， 反复调用 x.equals(y) 应该返回同样的结果。
+-  5 ) 对于任意非空引用 x, x.equals(null) 应该返回 false.
 
-  这些规则十分合乎情理， 从而避免了类库实现者在数据结构中定位一个元素时还要考虑 调用 x.equals(y), 还是调用 y.equals(x) 的问题。
+  这些规则十分合乎情理， 从而避免了类库实现者在数据结构中定位一个元素时还要考虑调用 x.equals(y), 还是调用 y.equals(x) 的问题。
 
 这些内容在 Object.euqals 方法的文档中也有提到：
 
@@ -216,11 +218,12 @@ Java语言规范要求equals方法具有以下特性：
 2) 检测 this 与 otherObject 是否引用同一个对象:
     if (this = otherObject) return true;
 
-    这条语句只是一个优化。 实际上， 这是一种经常采用的形式。 因为计算这个等式要比一 个一个地比较类中的域所付出的代价小得多。
+    这条语句只是一个优化。 实际上， 这是一种经常采用的形式。 因为计算这个等式要比一个一个地比较类中的域所付出的代价小得多。
 
-3) 检测 otherObject 是否为 null , 如 果 为 null , 返 回 false。 这项检测是很必要的。 if (otherObject = null) return false;
+3) 检测 otherObject 是否为 null , 如果为 null , 返回 false。 这项检测是很必要的。 
+   if (otherObject = null) return false;
 
-4) 比较 this 与 otherObject 是否属于同一个类。如果 equals 的语义在每个子类中有所改 变， 就使用 getClass 检测:
+4) 比较 this 与 otherObject 是否属于同一个类。如果 equals 的语义在每个子类中有所改变， 就使用 getClass 检测:
     if (getClass() != otherObject.getCIassO) return false;
 
     如果所有的子类都拥有统一的语义， 就使用 instanceof 检测: 
@@ -230,13 +233,13 @@ Java语言规范要求equals方法具有以下特性：
    
    ClassName other = (ClassName) otherObject
   
-   因为传入的参数是 Object 对象类型，因此这里必须要做强制类型转换。否则otherObject无法调用Employee类的方法。
+   因为传入的参数是 Object 对象类型，因此这里必须要做强制类型转换。否则 otherObject 无法调用 Employee 类的方法。
 
-6）现在开始对所有需要比较的域进行比较了。使用= 比较基本类型域，使用equals比 较对象域。如果所有的域都匹配，就返回true; 否则返回false。
+6）现在开始对所有需要比较的域进行比较了。使用 == 比较基本类型域，使用equals比较对象域。如果所有的域都匹配，就返回true; 否则返回false。
 
-  return fieldl == other.field && Objects.equa1s(fie1d2, other.field2)
+  return field1 == other.field1 && Objects.equals(fie1d2, other.field2)
 
-  如果在子类中重新定义equals, 就要在其中包含调用super.equals(other。)
+  如果在子类中重新定义equals, 就要在其中包含调用super.equals(other).
 
 ##### 参考案例：
 
@@ -270,14 +273,16 @@ public class Employee {
 AbstractSet 类有两个具体子类: TreeSet 和 HashSet, 它们分别使用不同的算法实现查找集合元素的操作。 
 无论集合采用何种方式实现， 都需要拥有对任意两个集合进行比较的功能。
 
-然而， 集合是相当特殊的一个例子， 应该将 AbstractSetequals 声明为 final , 这是因为没有任何一个子类需要重定义集合是否相等的语义。 
-(事实上， 这个方法并没有被声明为 final. 这样做， 可以让子类选择更加有效的算法对集合进行是否相等的检测。)
+然而， 集合是相当特殊的一个例子， 应该将 AbstractSetequals 声明为 final , 这是因为没有任何一个子类需要重定义集合是否相等的语义。
+事实上， 这个方法并没有被声明为 final, 这样做，可以让子类选择更加有效的算法对集合进行是否相等的检测。
+
 
 下面可以从两个截然不同的情况看一下这个问题: 
 - 如果子类能够拥有自己的相等概念， 则对称性需求将强制采用 getClass 进行检测
 - 如果由超类决定相等的概念， 那么就可以使用 instanceof 进行检测， 这样可以在不同子类的对象之间进行相等的比较。
 
 在雇员和经理的例子中（Manager 继承自 Employee，详见 Java核心技术卷1 5.2.3）， 只要对应的域相等， 就认为两个对象相等。 
+
 如果两个 Manager 对象所对应的姓名、 薪水和雇佣日期均相等， 而奖金不相等， 就认为它们是不相同的， 因此， 可以使用 getClass 检测。
 
 但是，假设使用雇员的 ID 作为相等的检测标准， 并且这个相等的概念适用于所有的子类， 就可以使用 instanceof 进行检测， 并应该将 Employee.equals 声明为 final。
@@ -291,18 +296,19 @@ AbstractSet 类有两个具体子类: TreeSet 和 HashSet, 它们分别使用不
 public class Employee {
     public boolean equals(Employee other) {
         return other != null
-                && getClassO == other.getClass0
+                && getClass() == other.getClass()
                 && Objects.equals(name, other.name)
-                && salary —other, sal ary
+                && salary == other.salary
                 && Objects.equals(hireDay, other.hireDay);
     }
 }
 ```
 
 这个方法声明的显式参数类型是 Employee。 
-其结果并没有覆盖 Object 类的 equals 方 法， 而是定义了一个完全无关的方法。
+**其结果并没有覆盖 Object 类的 equals 方 法， 而是定义了一个完全无关的方法。**
 
 为了避免发生类型错误， 可以使用 @Override 对覆盖超类的方法进行标记: 
+
 ```java
 @Override public boolean equals(Object other)
 ```
