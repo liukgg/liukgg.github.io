@@ -133,6 +133,10 @@
 
         <!--其他评论card-->
         <div class="card">
+            <% if (theme.utteranc && theme.utteranc.enable) { %>
+                <%- partial('_partial/utteranc') %>
+            <% } %>
+
             <% if (theme.gitalk && theme.gitalk.enable) { %>
                 <%- partial('_partial/gitalk') %>
             <% } %>
