@@ -308,6 +308,12 @@ gitment:
     clientId:
     clientSecret:
 
+# utteranc config, default disabled
+# utteranc 评论模块的配置，默认为不激活
+utteranc:
+  enable: true
+  shortname:
+
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
 disqus:
