@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>《编程一万小时的反思》阅读交流</title>
+      <link href="/2021/08/16/theartofcode/bian-cheng-yi-wan-xiao-shi-de-fan-si-yue-du-jiao-liu/"/>
+      <url>/2021/08/16/theartofcode/bian-cheng-yi-wan-xiao-shi-de-fan-si-yue-du-jiao-liu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="《编程一万小时的反思》阅读心得分享"><a href="#《编程一万小时的反思》阅读心得分享" class="headerlink" title="《编程一万小时的反思》阅读心得分享"></a>《编程一万小时的反思》阅读心得分享</h2><blockquote><p>原文参见：<br>英文原文：<a href="https://matt-rickard.com/reflections-on-10-000-hours-of-programming/">https://matt-rickard.com/reflections-on-10-000-hours-of-programming/</a><br>中文译文：<a href="https://www.oschina.net/news/154219/reflections-on-10000-hours-of-programming">https://www.oschina.net/news/154219/reflections-on-10000-hours-of-programming</a></p></blockquote><p>近期认真阅读了一下 Matt.Rickard 总结的《编程一万小时的反思》， 并且和几位同学进行了一些交流。</p><p>把我们交流的一些非常有共鸣的点简单总结如下。</p><h3 id="核心要点"><a href="#核心要点" class="headerlink" title="核心要点"></a>核心要点</h3><h5 id="官方文档和源码是最重要的，如果二者有冲突，以源码为准。"><a href="#官方文档和源码是最重要的，如果二者有冲突，以源码为准。" class="headerlink" title="官方文档和源码是最重要的，如果二者有冲突，以源码为准。"></a>官方文档和源码是最重要的，如果二者有冲突，以源码为准。</h5><ul><li>原文内容：阅读源代码常常会比在 Stack Overflow 上更快找到答案。</li><li>Browsing the source is almost always faster than finding an answer on StackOverflow.</li><li>原文内容：从最好的资料中进行学习（这里 Matt 举例称他在学习 Go 时阅读了标准库）。</li><li>Only learn from the best. So when I was learning Go, I read the standard library.</li><li>对于使用到的各种软件和工具，尽量多看官方文档、少看他人解读的”二手资料”</li><li>请记住：源码一定是对的；如果发现资料/书籍有问题，请看源码；如果发现官方文档有问题，请看源码。</li></ul><h5 id="代码如果不好写单元测试或者不好测试，一般代码可能也不够好。"><a href="#代码如果不好写单元测试或者不好测试，一般代码可能也不够好。" class="headerlink" title="代码如果不好写单元测试或者不好测试，一般代码可能也不够好。"></a>代码如果不好写单元测试或者不好测试，一般代码可能也不够好。</h5><ul><li>原文内容：如果代码看起来很丑，那很可能是一个严重的错误。</li><li>If it looks ugly, it is most likely a terrible mistake.  </li><li>如果代码不好写测试，往往也是设计或者实现上还有优化空间（非绝对）。</li></ul><h5 id="KISS原则：Keep-it-Simple-and-Stupid"><a href="#KISS原则：Keep-it-Simple-and-Stupid" class="headerlink" title="KISS原则：Keep it Simple and Stupid."></a>KISS原则：Keep it Simple and Stupid.</h5><ul><li>原文内容：尽可能多地删除代码。</li><li>Delete as much code as you can.  </li><li>原文内容：简单往往是最难的。</li><li>Simple is hard. </li><li>尽量保持代码简单、可读性强，不要炫技、如果可能尽量不要用复杂方案。</li><li>每多一行代码，就多一个出错的可能性。所以可要可不要的代码就不要。</li><li>建议阅读《Unix编程艺术》，微信读书有电子版、或者可以买纸质版。（豆瓣评分9.0）</li></ul><h5 id="最好的注释即代码。"><a href="#最好的注释即代码。" class="headerlink" title="最好的注释即代码。"></a>最好的注释即代码。</h5><ul><li>原文：如果必须编写不是文档字符串 (docstring) 的注释，则应该考虑对这段代码进行重构。</li><li>If you have to write a comment that isn’t a docstring, it should probably be refactored. Every new line of comments increases this probability. (For a more nuanced take, the Linux Kernel Documentation)</li><li>只添加必要的注释；千万不要觉得注释越多越好，阅读注释也有成本。</li><li>如果你的代码可读性足够强，那么大部分地方不需要注释；此外，维护注释也需要成本，容易出现改了代码忘改注释的情况。</li></ul><h5 id="命名非常重要，命名做好了，代码已经成功了一半。"><a href="#命名非常重要，命名做好了，代码已经成功了一半。" class="headerlink" title="命名非常重要，命名做好了，代码已经成功了一半。"></a>命名非常重要，命名做好了，代码已经成功了一半。</h5><ul><li>原文：正确命名变量，这也是一门艺术。</li><li>Name variables correctly. Again, an art.  </li><li>Bob大叔在《代码整洁之道》一书中第2章即花大篇幅介绍”有意义的命名”，所以命名的重要性可见一斑，建议阅读该章内容。</li><li>命名要点包括：<ul><li>名副其实</li><li>避免误导</li><li>做有意义的区分</li><li>使用读得出来的名称</li><li>使用可搜索的名称</li><li>避免使用编码</li><li>避免思维映射</li><li>类名、方法名分别有约定</li><li>每个概念对应一个词</li><li>别抖机灵、别用双关语</li><li>使用解决方案领域名称、使用源自所涉问题领域的名称</li><li>添加有意义的语境、不要添加没用的语境</li></ul></li><li>我们不要认为自己只是个码农，而应该是个”代码艺术家”，要对代码之美有追求。</li></ul><h5 id="努力成为10倍工程师。"><a href="#努力成为10倍工程师。" class="headerlink" title="努力成为10倍工程师。"></a>努力成为10倍工程师。</h5><ul><li>原文：部分程序员的效率是其他程序员的 10 倍。</li><li>Some programmers are 10x more efficient than others. I know because I’ve been both a 10x programmer and a -1x programmer.</li><li>原文：成为 10 倍程序员与 10 倍员工这两者之间没有相关性（或许是负相关）。</li><li>There’s no correlation between being a 10x programmer and a 10x employee (maybe a negative one).</li><li>虽然是否真的存在10倍工程师还有争议，但是此处重在强调应该成为一个专业的、有职业素养的优秀程序员。</li><li>可以搜索”10倍程序员”看看相关内容。</li><li>建议阅读 Bob 大叔”整洁之道四部曲”：《Clean Code》、《Clean Coder》、《Clean Architecture》、《Clean Agile》</li><li>这4本书直译过来叫做：代码整洁之道、程序员整洁之道（实际中文译本叫做：《代码整洁之道：程序员的职业素养》）、架构整洁之道、敏捷整洁之道。</li><li>针对如何成为一个有职业素养的专业程序员，尤其推荐首先阅读《Clean Coder》。</li></ul><h5 id="防御性编程：不要相信任何输入，所有的输入都要设想可能是非法输入。"><a href="#防御性编程：不要相信任何输入，所有的输入都要设想可能是非法输入。" class="headerlink" title="防御性编程：不要相信任何输入，所有的输入都要设想可能是非法输入。"></a>防御性编程：不要相信任何输入，所有的输入都要设想可能是非法输入。</h5><ul><li>原文：好的 API 易于使用且难以误用。</li><li>Good APIs are easy to use and hard to misuse.  </li><li>原文：避免多层嵌套条件。</li><li>Avoid nesting conditionals deeply. Have common sense about your conditional tests and naming convention.  </li><li>好的 API 易于使用：命名合理、可读性强，输入输出设置合理且扩展性好。</li><li>好的 API 难以误用：针对各种可能的误用情况进行必要校验并给出可读性强的报错信息提示。</li></ul><h5 id="代码与配置分离，一般不要硬编码"><a href="#代码与配置分离，一般不要硬编码" class="headerlink" title="代码与配置分离，一般不要硬编码"></a>代码与配置分离，一般不要硬编码</h5><ul><li>原文：配置七边形（Matt 自创的术语）从硬编码值开始，到环境变量、CLI Flag、配置文件、模板化配置文件、DSL、通用 bash 脚本，再到硬编码值。开发者应了解这个七边形中的各个位置。</li><li>The configuration cycle goes from hardcoded values to environment variables, to CLI flags, to a configuration file, to a templated configuration file, to a DSL, to a generic bash script, and back to hardcoded values. Know where you are on this Heptagon of Configuration.</li><li>可以采取的策略包括：使用常量、使用环境变量、使用配置中心等。</li></ul><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul><li>要成为一个优秀的、有职业素养的专业程序员绝非易事。</li><li>作为一名程序员，应该对代码之美有高追求。</li><li>为了写出优雅、具有美感的代码和成为代码艺术家，推荐阅读：<ul><li>《Unix编程艺术》 </li><li>《Clean Coder》</li><li>《Clean Code》</li><li>《Clean Architecture》</li><li>《Clean Agile》</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程艺术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程艺术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo在matery主题下集成utteranc评论插件</title>
       <link href="/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/"/>
       <url>/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/</url>

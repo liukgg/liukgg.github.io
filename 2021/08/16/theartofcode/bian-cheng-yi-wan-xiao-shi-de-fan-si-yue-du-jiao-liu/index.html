@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo在matery主题下集成utteranc评论插件, GoodLuck">
+    <meta name="keywords" content="《编程一万小时的反思》阅读交流, GoodLuck">
     <meta name="description" content="学无止境，永不止步">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo在matery主题下集成utteranc评论插件 | GoodLuck</title>
+    <title>《编程一万小时的反思》阅读交流 | GoodLuck</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo在matery主题下集成utteranc评论插件</h1>
+                    <h1 class="description center-align post-title">《编程一万小时的反思》阅读交流</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo-Matery/">
-                                <span class="chip bg-color">Hexo-Matery</span>
+                            <a href="/tags/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/">
+                                <span class="chip bg-color">编程艺术</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Reference/" class="post-category">
-                                Reference
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/" class="post-category">
+                                编程艺术
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-15
+                    2021-08-16
                 </div>
                 
 
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -498,72 +498,96 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="hexo在matery主题下集成utteranc评论插件"><a href="#hexo在matery主题下集成utteranc评论插件" class="headerlink" title="hexo在matery主题下集成utteranc评论插件"></a>hexo在matery主题下集成utteranc评论插件</h2><p>本博客使用的是hexo搭建，主题选择的是matery。（感兴趣的可参考第一篇博客。）</p>
-<p>matery主题的介绍和使用详见：<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a>.</p>
-<p>我选择该主题的主要原因是比较喜欢其界面风格、整体感觉比较优雅，且功能较为完整。<br>在此感谢该主题作者的分享 :)</p>
-<p>为了能够和各位更好地交流，希望引入评论插件。找了一圈以后，想要用 utteranc 这个工具：<br><a target="_blank" rel="noopener" href="https://utteranc.es/">https://utteranc.es</a>       (<a target="_blank" rel="noopener" href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
-<p>然而在网上找了下集成的方法，发现基本上只介绍了hexo下的fluid主题和next，对于matery没有找到介绍。</p>
-<p>所以这里针对matery主题如何集成 utteranc插件做一下简单分享。</p>
-<h1 id="前置准备：准备一个代码仓库并配置好-utteranc"><a href="#前置准备：准备一个代码仓库并配置好-utteranc" class="headerlink" title="前置准备：准备一个代码仓库并配置好 utteranc"></a>前置准备：准备一个代码仓库并配置好 utteranc</h1><p>该部分内容，网上有详细教程，本文不再赘述。（直接google或者百度搜索 hexo 集成 utteranc）</p>
-<p>可以参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/785d727810b3">https://www.jianshu.com/p/785d727810b3</a></p>
-<p>在此，也对该文章的作者表示感谢 :)</p>
-<h1 id="在自己的博客中集成-utteranc"><a href="#在自己的博客中集成-utteranc" class="headerlink" title="在自己的博客中集成 utteranc"></a>在自己的博客中集成 utteranc</h1><blockquote>
-<p>注意以下前置条件：</p>
-<ol>
-<li>已经有一个博客系统，基于hexo搭建，使用matery主题。</li>
-<li>完成前述步骤：有一个公开的github仓库，用来支持评论。（因为utteranc的评论实际上是会记录到github仓库的issue中。）</li>
-<li>完成前述步骤：配置好 utteranc，并复制其提供的一段js代码，类似下面这样：</li>
-</ol>
+                <h2 id="《编程一万小时的反思》阅读心得分享"><a href="#《编程一万小时的反思》阅读心得分享" class="headerlink" title="《编程一万小时的反思》阅读心得分享"></a>《编程一万小时的反思》阅读心得分享</h2><blockquote>
+<p>原文参见：<br>英文原文：<a target="_blank" rel="noopener" href="https://matt-rickard.com/reflections-on-10-000-hours-of-programming/">https://matt-rickard.com/reflections-on-10-000-hours-of-programming/</a><br>中文译文：<a target="_blank" rel="noopener" href="https://www.oschina.net/news/154219/reflections-on-10000-hours-of-programming">https://www.oschina.net/news/154219/reflections-on-10000-hours-of-programming</a></p>
 </blockquote>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://utteranc.es/client.js"</span>
-        repo<span class="token operator">=</span><span class="token string">"liukgg/comment-utterances"</span>
-        issue<span class="token operator">-</span>term<span class="token operator">=</span><span class="token string">"pathname"</span>
-        theme<span class="token operator">=</span><span class="token string">"github-light"</span>
-        crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span>
-        async<span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<br>
-
-<p>接下来，正式开始在hexo搭建的博客、且选择 matery 主题的情况下，集成utteranc 以实现评论功能。</p>
-<h3 id="主要改动：修改-matery-主题中的相关文件"><a href="#主要改动：修改-matery-主题中的相关文件" class="headerlink" title="主要改动：修改 matery 主题中的相关文件"></a>主要改动：修改 matery 主题中的相关文件</h3><p>改动文件目录基本都在这个下面： themes/hexo-theme-matery/</p>
-<h5 id="改动第1个文件：-themes-hexo-theme-matery-config-yml"><a href="#改动第1个文件：-themes-hexo-theme-matery-config-yml" class="headerlink" title="改动第1个文件： themes/hexo-theme-matery/_config.yml"></a>改动第1个文件： themes/hexo-theme-matery/_config.yml</h5><p>加入以下配置：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># utteranc config, default disabled</span>
-<span class="token comment"># utteranc 评论模块的配置，默认为不激活</span>
-<span class="token key atrule">utteranc</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>该配置的目的主要是和 matery 原来的引入评论插件保持一致，保持灵活性。</p>
-<h5 id="改动第2个文件-themes-hexo-theme-matery-layout-partial-post-detail-ejs"><a href="#改动第2个文件-themes-hexo-theme-matery-layout-partial-post-detail-ejs" class="headerlink" title="改动第2个文件: themes/hexo-theme-matery/layout/_partial/post-detail.ejs"></a>改动第2个文件: themes/hexo-theme-matery/layout/_partial/post-detail.ejs</h5><p>  加入以下配置(在165行左右，参考其他评论插件的代码位置)：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>utteranc <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>utteranc<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/utteranc'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>该处改动的目的是为了在所有博客文章中统一在底部加入一个评论模块，这个改动很关键、所放位置也很重要。<br>post-detail.ejs 是所有博客文章渲染的模板，因此需要在此处统一改动。</p>
-<h5 id="改动第3个文件：新增一个文件-themes-hexo-theme-matery-layout-partial-utteranc-ejs"><a href="#改动第3个文件：新增一个文件-themes-hexo-theme-matery-layout-partial-utteranc-ejs" class="headerlink" title="改动第3个文件：新增一个文件 themes/hexo-theme-matery/layout/_partial/utteranc.ejs"></a>改动第3个文件：新增一个文件 themes/hexo-theme-matery/layout/_partial/utteranc.ejs</h5><p>该文件内容如下：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span> data<span class="token operator">-</span>aos<span class="token operator">=</span><span class="token string">"fade-up"</span><span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"utteranc-container"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span><span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://utteranc.es/client.js"</span>
-                repo<span class="token operator">=</span><span class="token string">"liukgg/comment-utterances"</span>
-                issue<span class="token operator">-</span>term<span class="token operator">=</span><span class="token string">"pathname"</span>
-                theme<span class="token operator">=</span><span class="token string">"github-light"</span>
-                crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span>
-                async<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>该文件就是评论模块的真实内容，核心内容是在前述步骤中复制的 utteranc 配置。<br>此外，外面加了2个div模块，主要是为了在页面展示的时候加入一个方块、和文章风格保持基本一致。<br>（对于这个div里的样式具体是如何生效的，没有做过多探究，基本上是参考另一个评论插件 gitalk 的代码。）</p>
-<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><p>以上，就已经集成好了utteranc评论。重新启动 hexo server，刷新页面后，就能在文章下放看到评论模块了。</p>
-<p>效果可以参考：<a target="_blank" rel="noopener" href="http://luckliu.xyz/2021/08/01/hello-world/">http://luckliu.xyz/2021/08/01/hello-world/</a></p>
-<p>所有的留言都会出现在前述配置的github 仓库中，可以参考：<a target="_blank" rel="noopener" href="https://github.com/liukgg/comment-utterances/issues">https://github.com/liukgg/comment-utterances/issues</a></p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>如果博客中还有单独的一个留言板模块，那么还需要改动一下这个文件： themes/hexo-theme-matery/layout/contact.ejs</p>
-<p>加入以下代码(136行附近)：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>utteranc <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>utteranc<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/utteranc'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>重启服务 hexo server，刷新页面以后，就能看到留言板也能留言评论了。</p>
-<p>效果可以参考：<a target="_blank" rel="noopener" href="http://luckliu.xyz/contact">http://luckliu.xyz/contact</a></p>
-<p>如有问题，欢迎在我以上的博客留言板中留言交流。</p>
+<p>近期认真阅读了一下 Matt.Rickard 总结的《编程一万小时的反思》， 并且和几位同学进行了一些交流。</p>
+<p>把我们交流的一些非常有共鸣的点简单总结如下。</p>
+<h3 id="核心要点"><a href="#核心要点" class="headerlink" title="核心要点"></a>核心要点</h3><h5 id="官方文档和源码是最重要的，如果二者有冲突，以源码为准。"><a href="#官方文档和源码是最重要的，如果二者有冲突，以源码为准。" class="headerlink" title="官方文档和源码是最重要的，如果二者有冲突，以源码为准。"></a>官方文档和源码是最重要的，如果二者有冲突，以源码为准。</h5><ul>
+<li>原文内容：阅读源代码常常会比在 Stack Overflow 上更快找到答案。</li>
+<li>Browsing the source is almost always faster than finding an answer on StackOverflow.</li>
+<li>原文内容：从最好的资料中进行学习（这里 Matt 举例称他在学习 Go 时阅读了标准库）。</li>
+<li>Only learn from the best. So when I was learning Go, I read the standard library.</li>
+<li>对于使用到的各种软件和工具，尽量多看官方文档、少看他人解读的”二手资料”</li>
+<li>请记住：源码一定是对的；如果发现资料/书籍有问题，请看源码；如果发现官方文档有问题，请看源码。</li>
+</ul>
+<h5 id="代码如果不好写单元测试或者不好测试，一般代码可能也不够好。"><a href="#代码如果不好写单元测试或者不好测试，一般代码可能也不够好。" class="headerlink" title="代码如果不好写单元测试或者不好测试，一般代码可能也不够好。"></a>代码如果不好写单元测试或者不好测试，一般代码可能也不够好。</h5><ul>
+<li>原文内容：如果代码看起来很丑，那很可能是一个严重的错误。</li>
+<li>If it looks ugly, it is most likely a terrible mistake.  </li>
+<li>如果代码不好写测试，往往也是设计或者实现上还有优化空间（非绝对）。</li>
+</ul>
+<h5 id="KISS原则：Keep-it-Simple-and-Stupid"><a href="#KISS原则：Keep-it-Simple-and-Stupid" class="headerlink" title="KISS原则：Keep it Simple and Stupid."></a>KISS原则：Keep it Simple and Stupid.</h5><ul>
+<li>原文内容：尽可能多地删除代码。</li>
+<li>Delete as much code as you can.  </li>
+<li>原文内容：简单往往是最难的。</li>
+<li>Simple is hard. </li>
+<li>尽量保持代码简单、可读性强，不要炫技、如果可能尽量不要用复杂方案。</li>
+<li>每多一行代码，就多一个出错的可能性。所以可要可不要的代码就不要。</li>
+<li>建议阅读《Unix编程艺术》，微信读书有电子版、或者可以买纸质版。（豆瓣评分9.0）</li>
+</ul>
+<h5 id="最好的注释即代码。"><a href="#最好的注释即代码。" class="headerlink" title="最好的注释即代码。"></a>最好的注释即代码。</h5><ul>
+<li>原文：如果必须编写不是文档字符串 (docstring) 的注释，则应该考虑对这段代码进行重构。</li>
+<li>If you have to write a comment that isn’t a docstring, it should probably be refactored. Every new line of comments increases this probability. (For a more nuanced take, the Linux Kernel Documentation)</li>
+<li>只添加必要的注释；千万不要觉得注释越多越好，阅读注释也有成本。</li>
+<li>如果你的代码可读性足够强，那么大部分地方不需要注释；此外，维护注释也需要成本，容易出现改了代码忘改注释的情况。</li>
+</ul>
+<h5 id="命名非常重要，命名做好了，代码已经成功了一半。"><a href="#命名非常重要，命名做好了，代码已经成功了一半。" class="headerlink" title="命名非常重要，命名做好了，代码已经成功了一半。"></a>命名非常重要，命名做好了，代码已经成功了一半。</h5><ul>
+<li>原文：正确命名变量，这也是一门艺术。</li>
+<li>Name variables correctly. Again, an art.  </li>
+<li>Bob大叔在《代码整洁之道》一书中第2章即花大篇幅介绍”有意义的命名”，所以命名的重要性可见一斑，建议阅读该章内容。</li>
+<li>命名要点包括：<ul>
+<li>名副其实</li>
+<li>避免误导</li>
+<li>做有意义的区分</li>
+<li>使用读得出来的名称</li>
+<li>使用可搜索的名称</li>
+<li>避免使用编码</li>
+<li>避免思维映射</li>
+<li>类名、方法名分别有约定</li>
+<li>每个概念对应一个词</li>
+<li>别抖机灵、别用双关语</li>
+<li>使用解决方案领域名称、使用源自所涉问题领域的名称</li>
+<li>添加有意义的语境、不要添加没用的语境</li>
+</ul>
+</li>
+<li>我们不要认为自己只是个码农，而应该是个”代码艺术家”，要对代码之美有追求。</li>
+</ul>
+<h5 id="努力成为10倍工程师。"><a href="#努力成为10倍工程师。" class="headerlink" title="努力成为10倍工程师。"></a>努力成为10倍工程师。</h5><ul>
+<li>原文：部分程序员的效率是其他程序员的 10 倍。</li>
+<li>Some programmers are 10x more efficient than others. I know because I’ve been both a 10x programmer and a -1x programmer.</li>
+<li>原文：成为 10 倍程序员与 10 倍员工这两者之间没有相关性（或许是负相关）。</li>
+<li>There’s no correlation between being a 10x programmer and a 10x employee (maybe a negative one).</li>
+<li>虽然是否真的存在10倍工程师还有争议，但是此处重在强调应该成为一个专业的、有职业素养的优秀程序员。</li>
+<li>可以搜索”10倍程序员”看看相关内容。</li>
+<li>建议阅读 Bob 大叔”整洁之道四部曲”：《Clean Code》、《Clean Coder》、《Clean Architecture》、《Clean Agile》</li>
+<li>这4本书直译过来叫做：代码整洁之道、程序员整洁之道（实际中文译本叫做：《代码整洁之道：程序员的职业素养》）、架构整洁之道、敏捷整洁之道。</li>
+<li>针对如何成为一个有职业素养的专业程序员，尤其推荐首先阅读《Clean Coder》。</li>
+</ul>
+<h5 id="防御性编程：不要相信任何输入，所有的输入都要设想可能是非法输入。"><a href="#防御性编程：不要相信任何输入，所有的输入都要设想可能是非法输入。" class="headerlink" title="防御性编程：不要相信任何输入，所有的输入都要设想可能是非法输入。"></a>防御性编程：不要相信任何输入，所有的输入都要设想可能是非法输入。</h5><ul>
+<li>原文：好的 API 易于使用且难以误用。</li>
+<li>Good APIs are easy to use and hard to misuse.  </li>
+<li>原文：避免多层嵌套条件。</li>
+<li>Avoid nesting conditionals deeply. Have common sense about your conditional tests and naming convention.  </li>
+<li>好的 API 易于使用：命名合理、可读性强，输入输出设置合理且扩展性好。</li>
+<li>好的 API 难以误用：针对各种可能的误用情况进行必要校验并给出可读性强的报错信息提示。</li>
+</ul>
+<h5 id="代码与配置分离，一般不要硬编码"><a href="#代码与配置分离，一般不要硬编码" class="headerlink" title="代码与配置分离，一般不要硬编码"></a>代码与配置分离，一般不要硬编码</h5><ul>
+<li>原文：配置七边形（Matt 自创的术语）从硬编码值开始，到环境变量、CLI Flag、配置文件、模板化配置文件、DSL、通用 bash 脚本，再到硬编码值。开发者应了解这个七边形中的各个位置。</li>
+<li>The configuration cycle goes from hardcoded values to environment variables, to CLI flags, to a configuration file, to a templated configuration file, to a DSL, to a generic bash script, and back to hardcoded values. Know where you are on this Heptagon of Configuration.</li>
+<li>可以采取的策略包括：使用常量、使用环境变量、使用配置中心等。</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>要成为一个优秀的、有职业素养的专业程序员绝非易事。</li>
+<li>作为一名程序员，应该对代码之美有高追求。</li>
+<li>为了写出优雅、具有美感的代码和成为代码艺术家，推荐阅读：<ul>
+<li>《Unix编程艺术》 </li>
+<li>《Clean Coder》</li>
+<li>《Clean Code》</li>
+<li>《Clean Architecture》</li>
+<li>《Clean Agile》</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -590,7 +614,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/">https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/</a>
+                    <a href="https://liukgg.github.io/2021/08/16/theartofcode/bian-cheng-yi-wan-xiao-shi-de-fan-si-yue-du-jiao-liu/">https://liukgg.github.io/2021/08/16/theartofcode/bian-cheng-yi-wan-xiao-shi-de-fan-si-yue-du-jiao-liu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -628,8 +652,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo-Matery/">
-                                    <span class="chip bg-color">Hexo-Matery</span>
+                                <a href="/tags/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/">
+                                    <span class="chip bg-color">编程艺术</span>
                                 </a>
                             
                         </div>
@@ -832,9 +856,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/08/16/theartofcode/bian-cheng-yi-wan-xiao-shi-de-fan-si-yue-du-jiao-liu/">
                     <div class="card-image">
@@ -852,9 +877,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -867,6 +892,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -885,13 +911,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/09/javacoretech/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/">
+                <a href="/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JavaCoreTech05-类继承的设计技巧">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="hexo在matery主题下集成utteranc评论插件">
                         
-                        <span class="card-title">JavaCoreTech05-类继承的设计技巧</span>
+                        <span class="card-title">hexo在matery主题下集成utteranc评论插件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -902,14 +928,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/Reference/" class="post-category">
+                                    Reference
                                 </a>
                             
                             
@@ -919,8 +945,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Hexo-Matery/">
+                        <span class="chip bg-color">Hexo-Matery</span>
                     </a>
                     
                 </div>
