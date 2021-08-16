@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaCoreTech05-类继承的设计技巧, GoodLuck">
+    <meta name="keywords" content="Hello World, GoodLuck">
     <meta name="description" content="学无止境，永不止步">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaCoreTech05-类继承的设计技巧 | GoodLuck</title>
+    <title>Hello World | GoodLuck</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaCoreTech05-类继承的设计技巧</h1>
+                    <h1 class="description center-align post-title">Hello World</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/Reference/">
+                                <span class="chip bg-color">Reference</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/" class="post-category">
+                                参考资料
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-09
+                    2021-08-01
                 </div>
                 
 
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    73
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -498,14 +498,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>Java核心技术 卷I 第5章 5.8</p>
-</blockquote>
-<p>在本章的最后， 给出一些对设计继承关系很有帮助的建议。</p>
-<ol>
-<li>将公共操作和域放在超类<br>这就是为什么将姓名域放在 Person 类中， 而没有将它放在 Employee 和 Student 类中的原因。 2. 不要使用受保护的域<br>有些程序员认为， 将大多数的实例域定义为 protected 是一个不错的主意， 只有这样， 子<br>e.printStackTraceO ;<br>类才能够在需要的时候直接访问它们。 然而， protected 机制并不能够带来更好的保护， 其原</li>
-</ol>
-<p>因主要有两点。 第一， 子类集合是无限制的， 任何一个人都能够由某个类派生一个子类， 并 编写代码以直接访问 protected 的实例域， 从而破坏了封装性。 第二， 在 Java 程序设计语言 中， 在同一个包中的所有类都可以访问 proteced 域， 而不管它是否为这个类的子类。<br>不过， protected 方法对于指示那些不提供一般用途而应在子类中重新定义的方法很有用。 3.使用继承实现“ is-a”关系 使用继承很容易达到节省代码的目的，但有时候也被人们滥用了。例如， 假设需要定义<br>一个钟点工类。 钟点工的信息包含姓名和雇佣日期， 但是没有薪水。 他们按小时计薪， 并且 不会因为拖延时间而获得加薪- 这似乎在诱导人们由 Employee 派生出子类 Contractor, 然后 再增加一个 hourlyWage 域。<br>public class Contractor extends Employee {<br>private double hourlyWage; }<br>这并不是一个好主意。 因为这样一来， 每个钟点;o橡中都包含了薪水和计时工资这两个域。 在实现打印支票或税单方法耐候， 会带来诞的麻烦， 并且与不采用继承， 会多写很制戈码。<br>钟点工与雇员之间不属于“ is-a” 关系。钟点工不是特殊的雇员。<br>4. 除非所有继承的方法都有意义， 否则不要使用继承<br>   假设想编写一个 Holiday 类 3 毫无疑问， 每个假日也是一日， 并且一日可以用 Gregorian<br>   Calendar 类的实例表示， 因此可以使用继承。 class Holiday extends CregorianCalendar { . . , }<br>   很遗憾， 在继承的操作中， 假日集不是封闭的。 在 GregorianCalendar 中有一个公有方法 add, 可以将假日转换成非假日:<br>   Holiday Christmas; Christmas.add(Calendar.DAY_OF_MONTH, 12);<br>   因此， 继承对于这个例子来说并不太适宜。<br>   需要指出， 如果扩展 LocalDate 就不会出现这个问题。 由于这个类是不可变的， 所以没<br>   有任何方法会把假日变成非假日。<br>5. 在覆盖方法时， 不要改变预期的行为<br>   置换原则不仅应用于语法， 而且也可以应用于行为， 这似乎更加重要。 在覆盖一个方法<br>   的时候， 不应该毫无原由地改变行为的内涵。就这一点而言， 编译器不会提供任何帮助， 即 编译器不会检查重新定义的方法是否有意义。例如，可以重定义Holiday类中add方法“ 修 正” 原方法的问题， 或什么也不做， 或抛出一个异常， 或继续到下一个假日。<br>   然而这些都违反了置换原则。 语句序列<br>   int dl = x.get(Calendar.DAY_OF_MONTH); x.add(Calendar.DAY_OF_MONTH, 1);<br>   int d2 = x.get(Calendar.DAY_OF_HONTH); System.out.println(d2 -dl);<br>   不管 x 属于 GregorianCalendar 类， 还是属于 Holiday 类， 执行上述语句后都应该得到预期的 行 为。<br>   当然， 这样可能会引起某些争议。人们可能就预期行为的含义争论不休。 例如， 有些人 争论说， 置换原则要求 Manager.equals 不处理 bonus 域， 因为 Employee.equals 没有它。 实际 上， 凭空讨论这些问题毫无意义。 关键在于， 在覆盖子类中的方法时， 不要偏离最初的设计 想法。<br>6. 使用多态， 而非类型信息<br>   无论什么时候， 对于下面这种形式的代码<br>   if (x isoftype1)<br>   actioniM <br>   else if (x isoftype2)<br>   actioniM; 都应该考虑使用多态性。<br>   action, 与 3如 0112 表示的是相同的概念吗? 如果是相同的概念， 就应该为这个概念定义一 个方法， 并将其放置在两个类的超类或接口中， 然后， 就可以调用<br>   X.action0<br>   以便使用多态性提供的动态分派机制执行相应的动作。 使用多态方法或接口编写的代码比使用对多种类型进行检测的代码更加易于维护和扩展。 7. 不要过多地使用反射<br>   反射机制使得人们可以通过在运行时查看域和方法， 让人们编写出更具有通用性的程序。<br>   这种功能对于编写系统程序来说极其实用， 但是通常不适于编写应用程序。 反射是很脆弱的， 即编译器很难帮助人们发现程序中的错误， 因此只有在运行时才发现错误并导致异常。<br>   现在你已经了解了 Java 支持面向对象编程的基础内容: 类、继承和多态。下一章中我们 将介绍两个髙级主题: 接口和 lambda 表达式， 它们对于有效地使用 Java 非常重要。  </p>
+                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
                 
             </div>
@@ -532,7 +537,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liukgg.github.io/2021/08/09/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/">https://liukgg.github.io/2021/08/09/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/</a>
+                    <a href="https://liukgg.github.io/2021/08/01/hexo/hello-world/">https://liukgg.github.io/2021/08/01/hexo/hello-world/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,8 +575,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/Reference/">
+                                    <span class="chip bg-color">Reference</span>
                                 </a>
                             
                         </div>
@@ -723,6 +728,37 @@
     </div>
 
     
+        <div class="card" data-aos="fade-up">
+    <div id="utteranc-container" class="card-content">
+        <script src="https://utteranc.es/client.js"
+                repo="liukgg/comment-utterances"
+                issue-term="pathname"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
+</div>
+
+<!--<div class="card gitalk-card" data-aos="fade-up">-->
+<!--        <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">-->
+<!--            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>-->
+<!--            <span>评论</span>-->
+<!--        </div>-->
+<!--    <div id="utteranc-container" class="card-content">-->
+<!--        <script src="https://utteranc.es/client.js"-->
+<!--                repo="liukgg/comment-utterances"-->
+<!--                issue-term="pathname"-->
+<!--                theme="github-light"-->
+<!--                crossorigin="anonymous"-->
+<!--                async>-->
+<!--        </script>-->
+<!--    </div>-->
+<!--</div>-->
+
+    
+
+    
 
     
 
@@ -743,18 +779,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/08/09/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/">
+                <a href="/2021/08/01/can-kao-zi-liao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JavaCoreTech05-类继承的设计技巧">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="参考资料">
                         
-                        <span class="card-title">JavaCoreTech05-类继承的设计技巧</span>
+                        <span class="card-title">参考资料</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -764,27 +799,26 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/" class="post-category">
+                                    参考资料
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Reference/">
+                        <span class="chip bg-color">Reference</span>
                     </a>
                     
                 </div>
@@ -795,16 +829,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/08/javacoretech-04-lei-she-ji-ji-qiao/">
+                <a href="/2021/08/01/hexo/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="JavaCoreTech-04-类设计技巧">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">JavaCoreTech-04-类设计技巧</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -815,25 +849,26 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/" class="post-category">
+                                    参考资料
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Reference/">
+                        <span class="chip bg-color">Reference</span>
                     </a>
                     
                 </div>
@@ -1038,7 +1073,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">13.8k</span>
+                        class="white-color">14.9k</span>
             
             
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaCoreTech-01-Java关键特性, GoodLuck">
+    <meta name="keywords" content="hexo在matery主题下集成utteranc评论插件, GoodLuck">
     <meta name="description" content="学无止境，永不止步">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaCoreTech-01-Java关键特性 | GoodLuck</title>
+    <title>hexo在matery主题下集成utteranc评论插件 | GoodLuck</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaCoreTech-01-Java关键特性</h1>
+                    <h1 class="description center-align post-title">hexo在matery主题下集成utteranc评论插件</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/Hexo-Matery/">
+                                <span class="chip bg-color">Hexo-Matery</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/Reference/" class="post-category">
+                                Reference
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-06
+                    2021-08-15
                 </div>
                 
 
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    4 分
                 </div>
                 
 
@@ -498,133 +498,72 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Java关键特性"><a href="#Java关键特性" class="headerlink" title="Java关键特性"></a>Java关键特性</h2><blockquote>
-<p>Java学习笔记系列-01</p>
-<p>《Java核心技术卷I——基础知识》 第1章 Java程序设计概述</p>
-<p>《Core Java Volume I-Fundamentals(10th Edition) 》 Cay S.Horstmann</p>
-<p>Java “白皮书”的关键术语</p>
+                <h2 id="hexo在matery主题下集成utteranc评论插件"><a href="#hexo在matery主题下集成utteranc评论插件" class="headerlink" title="hexo在matery主题下集成utteranc评论插件"></a>hexo在matery主题下集成utteranc评论插件</h2><p>本博客使用的是hexo搭建，主题选择的是matery。（感兴趣的可参考第一篇博客。）</p>
+<p>matery主题的介绍和使用详见：<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a>.</p>
+<p>我选择该主题的主要原因是比较喜欢其界面风格、整体感觉比较优雅，且功能较为完整。<br>在此感谢该主题作者的分享 :)</p>
+<p>为了能够和各位更好地交流，希望引入评论插件。找了一圈以后，想要用 utteranc 这个工具：<br><a target="_blank" rel="noopener" href="https://utteranc.es/">https://utteranc.es</a>       (<a target="_blank" rel="noopener" href="https://github.com/utterance/utterances">https://github.com/utterance/utterances</a>)</p>
+<p>然而在网上找了下集成的方法，发现基本上只介绍了hexo下的fluid主题和next，对于matery没有找到介绍。</p>
+<p>所以这里针对matery主题如何集成 utteranc插件做一下简单分享。</p>
+<h1 id="前置准备：准备一个代码仓库并配置好-utteranc"><a href="#前置准备：准备一个代码仓库并配置好-utteranc" class="headerlink" title="前置准备：准备一个代码仓库并配置好 utteranc"></a>前置准备：准备一个代码仓库并配置好 utteranc</h1><p>该部分内容，网上有详细教程，本文不再赘述。（直接google或者百度搜索 hexo 集成 utteranc）</p>
+<p>可以参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/785d727810b3">https://www.jianshu.com/p/785d727810b3</a></p>
+<p>在此，也对该文章的作者表示感谢 :)</p>
+<h1 id="在自己的博客中集成-utteranc"><a href="#在自己的博客中集成-utteranc" class="headerlink" title="在自己的博客中集成 utteranc"></a>在自己的博客中集成 utteranc</h1><blockquote>
+<p>注意以下前置条件：</p>
+<ol>
+<li>已经有一个博客系统，基于hexo搭建，使用matery主题。</li>
+<li>完成前述步骤：有一个公开的github仓库，用来支持评论。（因为utteranc的评论实际上是会记录到github仓库的issue中。）</li>
+<li>完成前述步骤：配置好 utteranc，并复制其提供的一段js代码，类似下面这样：</li>
+</ol>
 </blockquote>
-<h3 id="1-简单性"><a href="#1-简单性" class="headerlink" title="1 简单性"></a>1 简单性</h3><ul>
-<li>Java是C++语法的一个”纯净版本</li>
-<li>简单的另一方面是小。基本的解释器以及类支持大约仅40KB，再加上基础的标准类库和线程支持大约增加175KB。</li>
-</ul>
-<h3 id="2-面向对象"><a href="#2-面向对象" class="headerlink" title="2 面向对象"></a>2 面向对象</h3><ul>
-<li>面向对象是一种程序设计技术。它将重点放在数据（即对象）和对象的接口上。</li>
-</ul>
-<h3 id="3-分布式"><a href="#3-分布式" class="headerlink" title="3 分布式"></a>3 分布式</h3><ul>
-<li>Java又一个丰富的例程库，用于处理像HTTP和FTP之类的TCP/IP协议。</li>
-<li>Java应用程序能够通过URL打开和访问网络上的对象，其便捷程度就好像访问本地文件一样。</li>
-</ul>
-<h3 id="4-健壮性"><a href="#4-健壮性" class="headerlink" title="4 健壮性"></a>4 健壮性</h3><ul>
-<li>Java的设计目标之一在于使得Java编写的程序具有多方面的可靠性。</li>
-<li>Java投入了大量的精力进行早起的问题检测、后期动态的检测，并消除了容易出错的情况。</li>
-<li>Java和C++最大的不同在于Java采用的指针模型可以消除重写内存和损坏数据的可能性。</li>
-<li>Java编译器能够检测出许多在其他语言中仅在运行时才能够检测出来的问题。</li>
-</ul>
-<h3 id="5-安全性"><a href="#5-安全性" class="headerlink" title="5 安全性"></a>5 安全性</h3><ul>
-<li>Java可以适用于网络/分布式环境。使用Java可以构建防病毒、防篡改的系统。</li>
-<li>从一开始，Java就设计成能够防范各种工具，包括：<ul>
-<li>运行时堆栈溢出。如蠕虫和病毒常用的攻击手段。</li>
-<li>破坏自己的进程空间之外的内存。</li>
-<li>未经授权读写文件。</li>
-</ul>
-</li>
-<li>Java的安全模型很复杂</li>
-</ul>
-<h3 id="体系结构中立"><a href="#体系结构中立" class="headerlink" title="体系结构中立"></a>体系结构中立</h3><ul>
-<li>编译器生成一个体系结构中立的目标文件格式。</li>
-<li>只要有Java运行时系统，这些编译后的代码可以在学多处理器上运行。</li>
-<li>Java编译器通过生成与特定的计算机体系结构无关的字节码指令来实现这一特性。</li>
-</ul>
-<h3 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h3><ul>
-<li>与C和C++不同，Java规范中没有”依赖具体实现”的地方。基本数据类型的大小以及有关运算都做了明确的说明。</li>
-<li>例如，Java中的int永远为32位的整数，而在C/C++中，int可能是16位整数、32位整数，也可能是编译器提供商指定的其他大小。</li>
-<li>在Java中，数据类型具有固定的大小，这消除了代码移植时令人头痛的主要问题。</li>
-<li>二进制数据以固定的格式进行存储和传输，消除了字节顺序的困扰。</li>
-<li>字符串是用标准的Unicode格式存储的。</li>
-<li>除了与用户界面相关的部分外，所有其他Java库都能很好地支持平台独立性。</li>
-<li>你可以处理文件、正则表达式、XML、日期和时间、数据库、网络连接、线程等，而不用操心底层操作系统。</li>
-</ul>
-<h3 id="解释型"><a href="#解释型" class="headerlink" title="解释型"></a>解释型</h3><ul>
-<li>Java解释器可以在任何移植了解释器的机器上执行Java字节码。</li>
-<li>由于链接是一个增量式且轻量级的过程，所以，开发过程也变得更加快捷，更加具有探索性。</li>
-</ul>
-<h3 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h3><ul>
-<li>字节码可以（在运行时刻）动态地翻译成对应运行这个应用的特定的CPU的机器码。</li>
-<li>性能就是”适用性更强”。</li>
-</ul>
-<h3 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h3><ul>
-<li>多线程可以带来更好的交互响应和实时行为。</li>
-<li>Java在当时很超前。它是第一个支持并发程序设计的主流语言。</li>
-</ul>
-<h3 id="动态性"><a href="#动态性" class="headerlink" title="动态性"></a>动态性</h3><ul>
-<li>从各种角度看，Java与C或C++相比更加具有动态性。它能够适应不断发展的环境。</li>
-<li>库中可以自由地添加新方法和实例变量，而对客户端却没有任何影响。</li>
-<li>在Java中找出运行时类型信息十分简单。</li>
-</ul>
-<h3 id="关于Java的常见误解"><a href="#关于Java的常见误解" class="headerlink" title="关于Java的常见误解"></a>关于Java的常见误解</h3><ul>
-<li>1.Java是HTML的扩展。<ul>
-<li>Java是一种程序设计语言；HTML是一种描述网页结构的方式。</li>
-<li>两者基本没有任何共同之处。</li>
-</ul>
-</li>
-<li>2.使用XML，所以不需要Java。<ul>
-<li>Java是一种程序设计语言；XML是一种描述数据的方式。</li>
-<li>可以使用任何一种程序设计语言处理XML数据，而Java API对XML处理提供了很好地支持。</li>
-</ul>
-</li>
-<li>3.Java是一种非常容易学习的程序设计语言。<ul>
-<li>像Java这种功能强大的语言大都不太容易学习。</li>
-<li>首先，必须将编写玩具式程序的轻松和 开发实际项目的艰难区分开来。</li>
-<li>Java类库包含了数千种类和接口以及数万个函数。要想Java解决实际问题，还是需要了解不少内容的。</li>
-</ul>
-</li>
-<li>4.Java将成为适用于所有平台的通用性编程语言<ul>
-<li>从理论上讲，这是完全有可能的。</li>
-<li>但在实际中，某些领域其他语言有更出色的表现。</li>
-<li>Objective C和后来的Swift在iOS设备上就有着无可取代的地位，</li>
-<li>浏览器中的处理几乎完全由JavaScript掌控。</li>
-<li>Windows程序通常都用C++或C#编写。</li>
-<li>Java在服务器端编程和跨平台客户端应用领域则很有优势。</li>
-</ul>
-</li>
-<li>5.Java只不过是另外一种程序设计语言<ul>
-<li>Java是一种很好的程序设计语言，很多程序设计人员喜欢Java胜过C、C++或C#。</li>
-<li>程序设计语言的成功更多地取决于其支撑系统的能力，而不是优美的语法。</li>
-<li>人们主要关注: 是否提供了易于实现某些功能的易用、便捷和标准的库? 是否有开发工具提供商能建立强大的编程和调试环境? 语言和工具集是否能够与其他计算基础架构整合在 一起?</li>
-<li>Java的成功源于其类库能够让人们轻松地完成原本有一定难度的事情。例如:联网 Web 应用和并发。</li>
-<li>Java减少了指针错误，这是一个额外的好处，因此使用Java编程的效率更高。但这些并不是Java成功的全部原因。</li>
-</ul>
-</li>
-<li>6.Java是专用的，应该避免使用<ul>
-<li>根据GPL,任何人都可以得到专利许可，允许其使用和修改Java,不过仅限于桌面和服务器平台。</li>
-</ul>
-</li>
-<li>7.Java是解释型的，因此对于关键的应用程序速度太慢了<ul>
-<li>早期的Java是解释型的。</li>
-<li>现在Java虚拟机使用了即时编译器，因此采用Java编写的“ 热点”代码其运行速度与C++相差无几，有些情况下甚至更快。</li>
-</ul>
-</li>
-<li>8.所有的Java程序都是在网页中运行的。<ul>
-<li>所有的Java applet都是在网页浏览器中运行的。这也恰恰是applet的定义，即一种在浏览器中运行的Java程序。</li>
-<li>然而，大多数Java程序是运行在Web浏览器之外的独立应用程序。实际上，很多Java程序都在Web服务器上运行并生成用于网页的代码。</li>
-</ul>
-</li>
-<li>9.Java程序是主要的安全风险<ul>
-<li>尽管距离Java诞生已经20年之久，与其他常用的执行平台相比，Java还是安全得多。</li>
-</ul>
-</li>
-<li>10.JavaScript是Java的简易版<ul>
-<li>JavaScript是一种在网页中使用的脚本语言，它是由Netscape发明的，原来的名字叫做LiveScript。</li>
-<li>JavaScript的语法类似 Java,除此之外两者无任何关系当然名字有些相像。</li>
-</ul>
-</li>
-<li>11.使用Java可以用廉价的Internet设备取代桌面计算机<ul>
-<li>一些公司已经生产出Java网络计算机的原型。</li>
-<li>不过用户还不打算放弃功能强大而便利的桌面计算机，而去使用没有本地存储而且功能有限的网络设备。 </li>
-</ul>
-</li>
-</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://utteranc.es/client.js"</span>
+        repo<span class="token operator">=</span><span class="token string">"liukgg/comment-utterances"</span>
+        issue<span class="token operator">-</span>term<span class="token operator">=</span><span class="token string">"pathname"</span>
+        theme<span class="token operator">=</span><span class="token string">"github-light"</span>
+        crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span>
+        async<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<br>
+
+<p>接下来，正式开始在hexo搭建的博客、且选择 matery 主题的情况下，集成utteranc 以实现评论功能。</p>
+<h3 id="主要改动：修改-matery-主题中的相关文件"><a href="#主要改动：修改-matery-主题中的相关文件" class="headerlink" title="主要改动：修改 matery 主题中的相关文件"></a>主要改动：修改 matery 主题中的相关文件</h3><p>改动文件目录基本都在这个下面： themes/hexo-theme-matery/</p>
+<h5 id="改动第1个文件：-themes-hexo-theme-matery-config-yml"><a href="#改动第1个文件：-themes-hexo-theme-matery-config-yml" class="headerlink" title="改动第1个文件： themes/hexo-theme-matery/_config.yml"></a>改动第1个文件： themes/hexo-theme-matery/_config.yml</h5><p>加入以下配置：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># utteranc config, default disabled</span>
+<span class="token comment"># utteranc 评论模块的配置，默认为不激活</span>
+<span class="token key atrule">utteranc</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>该配置的目的主要是和 matery 原来的引入评论插件保持一致，保持灵活性。</p>
+<h5 id="改动第2个文件-themes-hexo-theme-matery-layout-partial-post-detail-ejs"><a href="#改动第2个文件-themes-hexo-theme-matery-layout-partial-post-detail-ejs" class="headerlink" title="改动第2个文件: themes/hexo-theme-matery/layout/_partial/post-detail.ejs"></a>改动第2个文件: themes/hexo-theme-matery/layout/_partial/post-detail.ejs</h5><p>  加入以下配置(在165行左右，参考其他评论插件的代码位置)：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>utteranc <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>utteranc<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/utteranc'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>该处改动的目的是为了在所有博客文章中统一在底部加入一个评论模块，这个改动很关键、所放位置也很重要。<br>post-detail.ejs 是所有博客文章渲染的模板，因此需要在此处统一改动。</p>
+<h5 id="改动第3个文件：新增一个文件-themes-hexo-theme-matery-layout-partial-utteranc-ejs"><a href="#改动第3个文件：新增一个文件-themes-hexo-theme-matery-layout-partial-utteranc-ejs" class="headerlink" title="改动第3个文件：新增一个文件 themes/hexo-theme-matery/layout/_partial/utteranc.ejs"></a>改动第3个文件：新增一个文件 themes/hexo-theme-matery/layout/_partial/utteranc.ejs</h5><p>该文件内容如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card"</span> data<span class="token operator">-</span>aos<span class="token operator">=</span><span class="token string">"fade-up"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"utteranc-container"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"card-content"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://utteranc.es/client.js"</span>
+                repo<span class="token operator">=</span><span class="token string">"liukgg/comment-utterances"</span>
+                issue<span class="token operator">-</span>term<span class="token operator">=</span><span class="token string">"pathname"</span>
+                theme<span class="token operator">=</span><span class="token string">"github-light"</span>
+                crossorigin<span class="token operator">=</span><span class="token string">"anonymous"</span>
+                async<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>该文件就是评论模块的真实内容，核心内容是在前述步骤中复制的 utteranc 配置。<br>此外，外面加了2个div模块，主要是为了在页面展示的时候加入一个方块、和文章风格保持基本一致。<br>（对于这个div里的样式具体是如何生效的，没有做过多探究，基本上是参考另一个评论插件 gitalk 的代码。）</p>
+<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><p>以上，就已经集成好了utteranc评论。重新启动 hexo server，刷新页面后，就能在文章下放看到评论模块了。</p>
+<p>效果可以参考：<a target="_blank" rel="noopener" href="http://luckliu.xyz/2021/08/01/hello-world/">http://luckliu.xyz/2021/08/01/hello-world/</a></p>
+<p>所有的留言都会出现在前述配置的github 仓库中，可以参考：<a target="_blank" rel="noopener" href="https://github.com/liukgg/comment-utterances/issues">https://github.com/liukgg/comment-utterances/issues</a></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>如果博客中还有单独的一个留言板模块，那么还需要改动一下这个文件： themes/hexo-theme-matery/layout/contact.ejs</p>
+<p>加入以下代码(136行附近)：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>utteranc <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>utteranc<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/utteranc'</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span> <span class="token operator">%</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>重启服务 hexo server，刷新页面以后，就能看到留言板也能留言评论了。</p>
+<p>效果可以参考：<a target="_blank" rel="noopener" href="http://luckliu.xyz/contact">http://luckliu.xyz/contact</a></p>
+<p>如有问题，欢迎在我以上的博客留言板中留言交流。</p>
 
                 
             </div>
@@ -651,7 +590,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liukgg.github.io/2021/08/06/javacoretech-01-java-guan-jian-te-xing/">https://liukgg.github.io/2021/08/06/javacoretech-01-java-guan-jian-te-xing/</a>
+                    <a href="https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/">https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -689,8 +628,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/Hexo-Matery/">
+                                    <span class="chip bg-color">Hexo-Matery</span>
                                 </a>
                             
                         </div>
@@ -842,6 +781,37 @@
     </div>
 
     
+        <div class="card" data-aos="fade-up">
+    <div id="utteranc-container" class="card-content">
+        <script src="https://utteranc.es/client.js"
+                repo="liukgg/comment-utterances"
+                issue-term="pathname"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
+</div>
+
+<!--<div class="card gitalk-card" data-aos="fade-up">-->
+<!--        <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">-->
+<!--            <i class="fas fa-comments fa-fw" aria-hidden="true"></i>-->
+<!--            <span>评论</span>-->
+<!--        </div>-->
+<!--    <div id="utteranc-container" class="card-content">-->
+<!--        <script src="https://utteranc.es/client.js"-->
+<!--                repo="liukgg/comment-utterances"-->
+<!--                issue-term="pathname"-->
+<!--                theme="github-light"-->
+<!--                crossorigin="anonymous"-->
+<!--                async>-->
+<!--        </script>-->
+<!--    </div>-->
+<!--</div>-->
+
+    
+
+    
 
     
 
@@ -862,17 +832,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/08/06/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/">
+                <a href="/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="JavaCoreTech-02-Java基本程序设计结构01">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="hexo在matery主题下集成utteranc评论插件">
                         
-                        <span class="card-title">JavaCoreTech-02-Java基本程序设计结构01</span>
+                        <span class="card-title">hexo在matery主题下集成utteranc评论插件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -882,9 +853,59 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-06
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Reference/" class="post-category">
+                                    Reference
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo-Matery/">
+                        <span class="chip bg-color">Hexo-Matery</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/08/09/javacoretech/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="JavaCoreTech05-类继承的设计技巧">
+                        
+                        <span class="card-title">JavaCoreTech05-类继承的设计技巧</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -902,55 +923,6 @@
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/08/01/ying-xiang-li-mi-ma-xue-xi-bi-ji/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="《影响力密码》学习笔记">
-                        
-                        <span class="card-title">《影响力密码》学习笔记</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
-                                    团队协作与管理
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Work/">
-                        <span class="chip bg-color">Work</span>
                     </a>
                     
                 </div>
@@ -1155,7 +1127,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">13.8k</span>
+                        class="white-color">14.9k</span>
             
             
             

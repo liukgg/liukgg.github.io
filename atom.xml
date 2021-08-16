@@ -6,7 +6,7 @@
   <link href="https://liukgg.github.io/atom.xml" rel="self"/>
   
   <link href="https://liukgg.github.io/"/>
-  <updated>2021-08-15T13:13:56.553Z</updated>
+  <updated>2021-08-16T03:23:02.860Z</updated>
   <id>https://liukgg.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo在matery主题下集成utteranc评论插件</title>
+    <link href="https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/"/>
+    <id>https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/</id>
+    <published>2021-08-15T21:15:06.000Z</published>
+    <updated>2021-08-16T03:23:02.860Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;hexo在matery主题下集成utteranc评论插件&quot;&gt;&lt;a href=&quot;#hexo在matery主题下集成utteranc评论插件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Reference" scheme="https://liukgg.github.io/categories/Reference/"/>
+    
+    
+    <category term="Hexo-Matery" scheme="https://liukgg.github.io/tags/Hexo-Matery/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaCoreTech05-类继承的设计技巧</title>
-    <link href="https://liukgg.github.io/2021/08/09/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/"/>
-    <id>https://liukgg.github.io/2021/08/09/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/</id>
+    <link href="https://liukgg.github.io/2021/08/09/javacoretech/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/"/>
+    <id>https://liukgg.github.io/2021/08/09/javacoretech/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/</id>
     <published>2021-08-09T08:28:47.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
@@ -48,10 +73,10 @@
   
   <entry>
     <title>JavaCoreTech-04-类设计技巧</title>
-    <link href="https://liukgg.github.io/2021/08/08/javacoretech-04-lei-she-ji-ji-qiao/"/>
-    <id>https://liukgg.github.io/2021/08/08/javacoretech-04-lei-she-ji-ji-qiao/</id>
+    <link href="https://liukgg.github.io/2021/08/08/javacoretech/javacoretech-04-lei-she-ji-ji-qiao/"/>
+    <id>https://liukgg.github.io/2021/08/08/javacoretech/javacoretech-04-lei-she-ji-ji-qiao/</id>
     <published>2021-08-08T21:09:11.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
@@ -74,10 +99,10 @@
   
   <entry>
     <title>JavaCoreTech-03-关于equals方法</title>
-    <link href="https://liukgg.github.io/2021/08/08/javacoretech-03-guan-yu-equals-fang-fa/"/>
-    <id>https://liukgg.github.io/2021/08/08/javacoretech-03-guan-yu-equals-fang-fa/</id>
+    <link href="https://liukgg.github.io/2021/08/08/javacoretech/javacoretech-03-guan-yu-equals-fang-fa/"/>
+    <id>https://liukgg.github.io/2021/08/08/javacoretech/javacoretech-03-guan-yu-equals-fang-fa/</id>
     <published>2021-08-08T20:00:55.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
@@ -100,10 +125,10 @@
   
   <entry>
     <title>JavaCoreTech-02-Java基本程序设计结构01</title>
-    <link href="https://liukgg.github.io/2021/08/06/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/"/>
-    <id>https://liukgg.github.io/2021/08/06/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/</id>
+    <link href="https://liukgg.github.io/2021/08/06/javacoretech/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/"/>
+    <id>https://liukgg.github.io/2021/08/06/javacoretech/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/</id>
     <published>2021-08-06T16:23:29.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
@@ -125,10 +150,10 @@
   
   <entry>
     <title>JavaCoreTech-01-Java关键特性</title>
-    <link href="https://liukgg.github.io/2021/08/06/javacoretech-01-java-guan-jian-te-xing/"/>
-    <id>https://liukgg.github.io/2021/08/06/javacoretech-01-java-guan-jian-te-xing/</id>
+    <link href="https://liukgg.github.io/2021/08/06/javacoretech/javacoretech-01-java-guan-jian-te-xing/"/>
+    <id>https://liukgg.github.io/2021/08/06/javacoretech/javacoretech-01-java-guan-jian-te-xing/</id>
     <published>2021-08-06T10:27:35.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
@@ -153,7 +178,7 @@
     <link href="https://liukgg.github.io/2021/08/01/ying-xiang-li-mi-ma-xue-xi-bi-ji/"/>
     <id>https://liukgg.github.io/2021/08/01/ying-xiang-li-mi-ma-xue-xi-bi-ji/</id>
     <published>2021-08-01T10:00:00.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
@@ -178,7 +203,7 @@
     <link href="https://liukgg.github.io/2021/08/01/godoc-in-china/"/>
     <id>https://liukgg.github.io/2021/08/01/godoc-in-china/</id>
     <published>2021-08-01T09:00:00.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
@@ -203,7 +228,7 @@
     <link href="https://liukgg.github.io/2021/08/01/can-kao-zi-liao/"/>
     <id>https://liukgg.github.io/2021/08/01/can-kao-zi-liao/</id>
     <published>2021-08-01T08:00:00.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
@@ -225,10 +250,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://liukgg.github.io/2021/08/01/hello-world/"/>
-    <id>https://liukgg.github.io/2021/08/01/hello-world/</id>
+    <link href="https://liukgg.github.io/2021/08/01/hexo/hello-world/"/>
+    <id>https://liukgg.github.io/2021/08/01/hexo/hello-world/</id>
     <published>2021-08-01T06:00:00.000Z</published>
-    <updated>2021-08-15T13:13:56.553Z</updated>
+    <updated>2021-08-16T03:23:02.860Z</updated>
     
     
       
