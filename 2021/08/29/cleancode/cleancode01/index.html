@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaCoreTech05-类继承的设计技巧, GoodLuck">
+    <meta name="keywords" content="CleanCode01, GoodLuck">
     <meta name="description" content="学无止境，永不止步">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>JavaCoreTech05-类继承的设计技巧 | GoodLuck</title>
+    <title>CleanCode01 | GoodLuck</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaCoreTech05-类继承的设计技巧</h1>
+                    <h1 class="description center-align post-title">CleanCode01</h1>
                 </div>
             </div>
         </div>
@@ -445,8 +445,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/">
+                                <span class="chip bg-color">编程艺术</span>
                             </a>
                         
                     </div>
@@ -457,8 +457,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/" class="post-category">
+                                编程艺术
                             </a>
                         
                     </div>
@@ -470,7 +470,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-09
+                    2021-08-29
                 </div>
                 
 
@@ -479,14 +479,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    10 分
                 </div>
                 
 
@@ -509,14 +509,166 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>Java核心技术 卷I 第5章 5.8</p>
+                <h2 id="《代码整洁之道》学习笔记01-整洁代码"><a href="#《代码整洁之道》学习笔记01-整洁代码" class="headerlink" title="《代码整洁之道》学习笔记01-整洁代码"></a>《代码整洁之道》学习笔记01-整洁代码</h2><blockquote>
+<p>《代码整洁之道》 作者：罗伯特.C.马丁（Bob大叔）<br>《Clean Code》 Robert C.Martin</p>
 </blockquote>
-<p>在本章的最后， 给出一些对设计继承关系很有帮助的建议。</p>
-<ol>
-<li>将公共操作和域放在超类<br>这就是为什么将姓名域放在 Person 类中， 而没有将它放在 Employee 和 Student 类中的原因。 2. 不要使用受保护的域<br>有些程序员认为， 将大多数的实例域定义为 protected 是一个不错的主意， 只有这样， 子<br>e.printStackTraceO ;<br>类才能够在需要的时候直接访问它们。 然而， protected 机制并不能够带来更好的保护， 其原</li>
-</ol>
-<p>因主要有两点。 第一， 子类集合是无限制的， 任何一个人都能够由某个类派生一个子类， 并 编写代码以直接访问 protected 的实例域， 从而破坏了封装性。 第二， 在 Java 程序设计语言 中， 在同一个包中的所有类都可以访问 proteced 域， 而不管它是否为这个类的子类。<br>不过， protected 方法对于指示那些不提供一般用途而应在子类中重新定义的方法很有用。 3.使用继承实现“ is-a”关系 使用继承很容易达到节省代码的目的，但有时候也被人们滥用了。例如， 假设需要定义<br>一个钟点工类。 钟点工的信息包含姓名和雇佣日期， 但是没有薪水。 他们按小时计薪， 并且 不会因为拖延时间而获得加薪- 这似乎在诱导人们由 Employee 派生出子类 Contractor, 然后 再增加一个 hourlyWage 域。<br>public class Contractor extends Employee {<br>private double hourlyWage; }<br>这并不是一个好主意。 因为这样一来， 每个钟点;o橡中都包含了薪水和计时工资这两个域。 在实现打印支票或税单方法耐候， 会带来诞的麻烦， 并且与不采用继承， 会多写很制戈码。<br>钟点工与雇员之间不属于“ is-a” 关系。钟点工不是特殊的雇员。<br>4. 除非所有继承的方法都有意义， 否则不要使用继承<br>   假设想编写一个 Holiday 类 3 毫无疑问， 每个假日也是一日， 并且一日可以用 Gregorian<br>   Calendar 类的实例表示， 因此可以使用继承。 class Holiday extends CregorianCalendar { . . , }<br>   很遗憾， 在继承的操作中， 假日集不是封闭的。 在 GregorianCalendar 中有一个公有方法 add, 可以将假日转换成非假日:<br>   Holiday Christmas; Christmas.add(Calendar.DAY_OF_MONTH, 12);<br>   因此， 继承对于这个例子来说并不太适宜。<br>   需要指出， 如果扩展 LocalDate 就不会出现这个问题。 由于这个类是不可变的， 所以没<br>   有任何方法会把假日变成非假日。<br>5. 在覆盖方法时， 不要改变预期的行为<br>   置换原则不仅应用于语法， 而且也可以应用于行为， 这似乎更加重要。 在覆盖一个方法<br>   的时候， 不应该毫无原由地改变行为的内涵。就这一点而言， 编译器不会提供任何帮助， 即 编译器不会检查重新定义的方法是否有意义。例如，可以重定义Holiday类中add方法“ 修 正” 原方法的问题， 或什么也不做， 或抛出一个异常， 或继续到下一个假日。<br>   然而这些都违反了置换原则。 语句序列<br>   int dl = x.get(Calendar.DAY_OF_MONTH); x.add(Calendar.DAY_OF_MONTH, 1);<br>   int d2 = x.get(Calendar.DAY_OF_HONTH); System.out.println(d2 -dl);<br>   不管 x 属于 GregorianCalendar 类， 还是属于 Holiday 类， 执行上述语句后都应该得到预期的 行 为。<br>   当然， 这样可能会引起某些争议。人们可能就预期行为的含义争论不休。 例如， 有些人 争论说， 置换原则要求 Manager.equals 不处理 bonus 域， 因为 Employee.equals 没有它。 实际 上， 凭空讨论这些问题毫无意义。 关键在于， 在覆盖子类中的方法时， 不要偏离最初的设计 想法。<br>6. 使用多态， 而非类型信息<br>   无论什么时候， 对于下面这种形式的代码<br>   if (x isoftype1)<br>   actioniM <br>   else if (x isoftype2)<br>   actioniM; 都应该考虑使用多态性。<br>   action, 与 3如 0112 表示的是相同的概念吗? 如果是相同的概念， 就应该为这个概念定义一 个方法， 并将其放置在两个类的超类或接口中， 然后， 就可以调用<br>   X.action0<br>   以便使用多态性提供的动态分派机制执行相应的动作。 使用多态方法或接口编写的代码比使用对多种类型进行检测的代码更加易于维护和扩展。 7. 不要过多地使用反射<br>   反射机制使得人们可以通过在运行时查看域和方法， 让人们编写出更具有通用性的程序。<br>   这种功能对于编写系统程序来说极其实用， 但是通常不适于编写应用程序。 反射是很脆弱的， 即编译器很难帮助人们发现程序中的错误， 因此只有在运行时才发现错误并导致异常。<br>   现在你已经了解了 Java 支持面向对象编程的基础内容: 类、继承和多态。下一章中我们 将介绍两个髙级主题: 接口和 lambda 表达式， 它们对于有效地使用 Java 非常重要。  </p>
+<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>阅读该书有2种原因：第一，你是个程序员；第二，你想成为更好的程序员。</p>
+<h3 id="1-1-要有代码"><a href="#1-1-要有代码" class="headerlink" title="1.1 要有代码"></a>1.1 要有代码</h3><ul>
+<li>代码永存！</li>
+<li>我们永远抛不掉代码，因为代码呈现了需求的细节。在某些层面上，这些细节无法被忽略或抽象，必须明确之。</li>
+<li>将需求明确到机器可以执行的细节程度，就是编程要做的事。而这种规约正是代码。</li>
+<li>实际上，在较高层次上用领域特定语言撰写的规约也将是代码！它也得严谨、精确、规范和详细，好让机器理解和执行。</li>
+<li>记住，代码确然是我们最终用来表达需求的那种语言。我们可以创造各种与需求接近的语言。。我们可以创造帮助把需求解析和汇总为正式结构的各种工具。</li>
+<li>然而，我们永远无法抛弃必要的精确性——所以代码永存。</li>
+</ul>
+<h3 id="1-2-糟糕的代码"><a href="#1-2-糟糕的代码" class="headerlink" title="1.2 糟糕的代码"></a>1.2 糟糕的代码</h3><ul>
+<li>我认为好代码是该领域最强固、最受支持、最被强调的前提了。</li>
+<li>我们知道好代码重要，是因为其短缺实在困扰了我们太久。</li>
+<li>勒布朗（LeBlanc）法则：稍后等于永不（Later equals never）。</li>
+</ul>
+<h3 id="1-3-混乱的代价"><a href="#1-3-混乱的代价" class="headerlink" title="1.3 混乱的代价"></a>1.3 混乱的代价</h3><ul>
+<li>随着混乱的增加，团队生产力也持续下降，以致趋近于零。（备注：后续可以结合技术债来进行一些总结）</li>
+<li>花时间保持代码整洁不但关乎效率，还关乎生存。</li>
+</ul>
+<blockquote>
+<p>为什么好代码会这么快就变质成糟糕的代码？理由多得很。<br>我们抱怨需求变化背离了初期设计。我们哀叹进度太紧张，没法干好活。<br>我们把问题归咎于愚蠢的经理、苛求的用户、没用的营销手段和那些电话消毒剂。<br>不过，亲爱的呆伯特（Dilbert），我们是自作自受。我们太不专业了。</p>
+</blockquote>
+<ul>
+<li><p>“不听经理的，我就会被炒鱿鱼。” 多半不会。多数经理想要知道实情，即便他们看起来不喜欢实情。</p>
+</li>
+<li><p>经理他们会分离卫护进度和需求；那是他们该干的。你则当以同等的热情卫护代码。</p>
+</li>
+<li><p><strong>守护代码、写好代码是程序员的本职工作，而不是经理的本职工作；所以，程序员应该守护自己的代码，这是专业性的体现。</strong></p>
+</li>
+<li><p>不要指望其他人来帮助你保持专业性，而是应该由你自己来坚守专业性。</p>
+</li>
+<li><p>医生如果按照病人说的办（在给他做手术前别洗手以节约时间），就是一种不专业的态度（更别说是犯罪了）。</p>
+</li>
+<li><p>同理，程序员遵从不了解混乱风险的经理的意愿，也是不专业的做法。</p>
+</li>
+<li><p>制造混乱无助于赶上期限。</p>
+</li>
+<li><p>赶上期限的唯一方法——做得快的唯一方法——就是始终尽可能保持代码整洁。</p>
+</li>
+</ul>
+<h3 id="1-3-4-整洁代码的艺术"><a href="#1-3-4-整洁代码的艺术" class="headerlink" title="1.3.4 整洁代码的艺术"></a>1.3.4 整洁代码的艺术</h3><ul>
+<li>这一节值得深思，单独整理出来。</li>
+<li>坏消息是，写整洁代码很像是绘画。多数人都知道一幅画是好是坏，但能分辨优劣并不表示懂得绘画。</li>
+<li>写整洁代码，需要遵循大量的小技巧，贯彻刻苦习得的”整洁感”。</li>
+<li><strong>这种”代码感”就是关键所在。</strong></li>
+<li>编写整洁代码的程序员就像是艺术家，他能用一系列变换把一块白板变作由优雅代码构成的系统。</li>
+</ul>
+<h3 id="1-3-5"><a href="#1-3-5" class="headerlink" title="1.3.5"></a>1.3.5</h3><ul>
+<li>这一节很关键，值得反复研读，单独整理出来。</li>
+</ul>
+<h5 id="C-发明者的观点"><a href="#C-发明者的观点" class="headerlink" title="C++发明者的观点"></a>C++发明者的观点</h5><ul>
+<li>Bjarne Stroustup，C++语言发明者，《C++ Programming Language》一书作者：</li>
+</ul>
+<blockquote>
+<p>我喜欢优雅和高效的代码。<br>代码逻辑应当直截了当，令缺陷难以隐藏；<br>尽量减少依赖关系，使之便于维护；<br>依据某种分层战略完善错误处理代码；<br>性能调至最优，省得引诱别人做没规矩的优化，搞出一堆混乱来。<br>整洁的代码只做好一件事。</p>
+</blockquote>
+<ul>
+<li><p>Bjarne用了”优雅”一词。说得好！优雅的定义：外表或举止上令人愉悦的优美和雅观；令人愉悦的精致和简单。</p>
+</li>
+<li><p>注意对”愉悦”一词的强调。Bjarne显然认为整洁的代码读起来令人愉悦。</p>
+</li>
+<li><p>读这种代码，就像见到手工精美的音乐盒或设计精良的汽车一般，让你会心一笑。</p>
+</li>
+<li><p>务实的Dave Thomas 和 Andy Hunt 从另一个角度阐述了”糟糕的代码引发混乱！”，他们提到破窗理论。</p>
+</li>
+<li><p>Bjarne 也提到完善错误处理代码，往深处说就是在细节上花心思。凸显出整洁代码对细节的重视。</p>
+</li>
+<li><p>Bjarne 以””整洁的代码只做好一件事”结束论断。毋庸置疑，软件设计的许多原则最终都会归结为这句警语。</p>
+</li>
+</ul>
+<h5 id="《面向对象分析与设计》作者观点"><a href="#《面向对象分析与设计》作者观点" class="headerlink" title="《面向对象分析与设计》作者观点"></a>《面向对象分析与设计》作者观点</h5><ul>
+<li>Brady Booch，《Object Oriented Analysis and Design with Application》一书作者：</li>
+</ul>
+<blockquote>
+<p>整洁的代码简单直接。<br>整洁的代码如同优美的散文。<br>整洁的代码从不隐藏设计者的意图，充满了干净利落的抽象和直截了当的控制语句。</p>
+</blockquote>
+<ul>
+<li>Grady的观点与Bjarne的观点有类似之处，但他从可读性的角度来定义。</li>
+<li>我特别喜欢”整洁的代码如同优美的散文”这种看法。</li>
+<li>代码应当讲述事实，不引人猜测。它只该包含必需之物。</li>
+</ul>
+<h5 id="Eclipse-战略教父的观点"><a href="#Eclipse-战略教父的观点" class="headerlink" title="Eclipse 战略教父的观点"></a>Eclipse 战略教父的观点</h5><ul>
+<li>“老大” Dave Thomas，OTI公司创始人，Eclipse 战略教父：</li>
+</ul>
+<blockquote>
+<p>整洁的代码可由作者之外的开发者阅读和增补。<br>它应当有单元测试和验收测试。<br>它使用有意义的命名。<br>它只提供一种而非多种做一件事的途径。<br>它只有尽量少的依赖关系，而且要明确地定义和提供清晰的、尽量少的API。<br>代码应通过其字面表达含义，因为不同的语言导致并非所有必需的信息均可通过代码自身清晰表达。</p>
+</blockquote>
+<ul>
+<li>Dave断言，整洁的代码变化与其他人予以增补。（开放闭合原则 OCP）</li>
+<li>Dave将整洁系于测试之上！</li>
+<li>应当用人类可读的方式来写代码。（源自Knuth的”字面编程”）</li>
+</ul>
+<h5 id="《修改代码的艺术》作者的观点"><a href="#《修改代码的艺术》作者的观点" class="headerlink" title="《修改代码的艺术》作者的观点"></a>《修改代码的艺术》作者的观点</h5><ul>
+<li>Michael Feathers，《Working Effectively with Legacy Code》一书作者：</li>
+</ul>
+<blockquote>
+<p>我可以列出我留意的整洁代码的所有特点，但其中有一条是根本性的。<br>整洁的代码总是看起来像是某位特别在意它的人写的。<br>几乎没有改进的余地。<br>代码的作者什么都想到了，如果你企图改进它，总会回到原点，赞叹某人留给你的代码——全心投入的某人留下的代码。</p>
+</blockquote>
+<ul>
+<li>一言以蔽之：在意。</li>
+<li>这就是本书的题旨所在。或许该加个副标题，如何在意代码。</li>
+</ul>
+<h5 id="《极限编程实施》作者的观点"><a href="#《极限编程实施》作者的观点" class="headerlink" title="《极限编程实施》作者的观点"></a>《极限编程实施》作者的观点</h5><ul>
+<li>Ron Jeffries，《Extreme Proramming Installed》以及《Extreme Programming Adventure in C#》作者</li>
+<li>Ron 初入行就在战略空军司令部编写Fortran程序，此后几乎在每种机器上编写过每种语言的代码。他的言论值得咀嚼。</li>
+</ul>
+<blockquote>
+<p>节选：<br>近年来，我开始研究贝克的简单代码规则，差不多也都琢磨透了。简单代码，依其重要顺序：<br>能通过所有测试；<br>没有重复代码；<br>体现系统中的全部设计理念；<br>包括尽量少的实体，比如类、方法、函数等。<br>在以上诸项中，我最在意代码重复。<br>（中间略过，感兴趣请读原文）<br>减少重复代码，提高表达力，提早构建简单抽象。这就是我写整洁代码的方法。</p>
+</blockquote>
+<ul>
+<li>Ron以寥寥数段文字概括了本书的全部内容。</li>
+<li>不要重复代码，只做一件事——表达力，小规模抽象。该有的都有了。</li>
+</ul>
+<h5 id="Wiki发明者、极限编程创始人之一的观点"><a href="#Wiki发明者、极限编程创始人之一的观点" class="headerlink" title="Wiki发明者、极限编程创始人之一的观点"></a>Wiki发明者、极限编程创始人之一的观点</h5><ul>
+<li>Ward Cunningham，Wiki发明者，Extreme Programming的创始人之一，Smalltalk 语言和面向对象的思想领袖。所有在意代码者的”教父”。</li>
+</ul>
+<blockquote>
+<p>如果每个例程都让你赶到深合己意，那就是整洁代码。<br>如果代码让编程语言看起来像是转为解决那个问题而存在的，就可以称之为漂亮的代码。</p>
+</blockquote>
+<h3 id="1-4-思想流派"><a href="#1-4-思想流派" class="headerlink" title="1.4 思想流派"></a>1.4 思想流派</h3><ul>
+<li>我（”鲍勃大叔”）又是怎么想的呢？在我眼中整洁代码是什么样的？</li>
+<li>本书将以详细到吓死人的程度告诉你，我和我的同道对整洁代码的看法。</li>
+<li>任何门派都并非绝对正确。</li>
+<li>可以把本书看作是对象导师（Object Mentor，作者开的咨询培训公司）整洁代码派的说明。</li>
+<li>书中要传授的就是我们勤操己艺的方法。</li>
+<li>实际上，书中很多建议都存在争议。可以参考、但不必一味盲从。</li>
+</ul>
+<h3 id="1-5-我们是作者"><a href="#1-5-我们是作者" class="headerlink" title="1.5 我们是作者"></a>1.5 我们是作者</h3><ul>
+<li>Javadoc中的 @author 字段告诉我们自己是什么人。我们是作者。作者都有读者。</li>
+<li>实际上，作者有责任与读者做良好沟通。下次你写代码的时候，记得自己是作者，要为评判你工作的读者写代码。</li>
+<li>你或许会问：代码真正”读”的成分有多少呢？难道主要力量不是应该用在”写”上吗？</li>
+<li>作者玩过”编辑器回放”，回放过程显示，多数时间都是在滚动屏幕，浏览其他模块！</li>
+<li>你该明白了。花费读与写的时间的比例超过 10 ： 1。写新代码时，我们一直在读旧代码。</li>
+<li>既然比例如此之高，我们就想让读的过程变得轻松，即便那会使编写过程更难。不可能光写不读，所以使之易读也就是使之易写。</li>
+<li>这事概无例外。不读周边代码就没法写代码。</li>
+<li>编写代码的难度，取决于读周边代码的难度。</li>
+<li>要想干得快，要想早点做完，要想轻松写代码，先让代码易读吧。</li>
+</ul>
+<h3 id="1-6-童子军军规"><a href="#1-6-童子军军规" class="headerlink" title="1.6 童子军军规"></a>1.6 童子军军规</h3><ul>
+<li>光把代码写好可不够。必须时时保持代码整洁。</li>
+<li>借用没改过童子军一条简单的军规，应用到我们的专业领域： <strong>让营地比你来时更干净。</strong></li>
+<li>如果每次签入时，代码都比签出时干净，那么代码就不会腐坏。</li>
+<li>清理并不一定要花多少功夫，也许知识改好一个变量名，拆分一个有点过长的函数，消除一点点重复代码，清理一个嵌套if语句。</li>
+</ul>
+<h3 id="1-7-前传与原则"><a href="#1-7-前传与原则" class="headerlink" title="1.7 前传与原则"></a>1.7 前传与原则</h3><ul>
+<li>本书是2002年我的那本《敏捷软件开发：原则、模式与实践》的”前传”。</li>
+<li>《Agile Software Development： Principles，Patterns and Practices》，简称PPP</li>
+</ul>
+<h3 id="1-8-小结"><a href="#1-8-小结" class="headerlink" title="1.8 小结"></a>1.8 小结</h3><ul>
+<li>艺术书并不保证你读过之后能成为艺术家，只能告诉你其他艺术家用过的工具、技术和思维过程。</li>
+<li>本书同样也不担保让你成为好程序员。它不担保能给你”代码感”。</li>
+<li>它所能做的，只是展示好程序员的思维过程，还有他们使用的技巧、技术和工具。</li>
+<li>你会看到好代码，也会看到糟糕的代码。你会的看到糟糕的代码如何转化为好代码。你会看到启发、规条和技巧的列表。</li>
+<li>你会看到一个有一个的例子。但最终结果取决于你自己。  </li>
+<li>最重要的是多练习。</li>
+<li>Practice makes perfect。（熟能生巧）  </li>
+<li>无他，唯手熟尔。</li>
+</ul>
 
                 
             </div>
@@ -543,7 +695,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://liukgg.github.io/2021/08/09/javacoretech/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/">https://liukgg.github.io/2021/08/09/javacoretech/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/</a>
+                    <a href="https://liukgg.github.io/2021/08/29/cleancode/cleancode01/">https://liukgg.github.io/2021/08/29/cleancode/cleancode01/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -581,8 +733,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/">
+                                    <span class="chip bg-color">编程艺术</span>
                                 </a>
                             
                         </div>
@@ -785,17 +937,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/">
+                <a href="/2021/08/29/cleancode/cleancode01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="hexo在matery主题下集成utteranc评论插件">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="CleanCode01">
                         
-                        <span class="card-title">hexo在matery主题下集成utteranc评论插件</span>
+                        <span class="card-title">CleanCode01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -805,26 +958,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Reference/" class="post-category">
-                                    Reference
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/" class="post-category">
+                                    编程艺术
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo-Matery/">
-                        <span class="chip bg-color">Hexo-Matery</span>
+                    <a href="/tags/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/">
+                        <span class="chip bg-color">编程艺术</span>
                     </a>
                     
                 </div>
@@ -838,13 +992,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/08/javacoretech/javacoretech-04-lei-she-ji-ji-qiao/">
+                <a href="/2021/08/29/guan-li-zhe-yi-ding-hui-yu-dao-de-na-xie-shi-xue-xi-bi-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="JavaCoreTech-04-类设计技巧">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="《管理者一定会遇到的那些事》学习笔记">
                         
-                        <span class="card-title">JavaCoreTech-04-类设计技巧</span>
+                        <span class="card-title">《管理者一定会遇到的那些事》学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -855,14 +1009,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86/" class="post-category">
+                                    技术管理
                                 </a>
                             
                             
@@ -872,8 +1026,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86/">
+                        <span class="chip bg-color">技术管理</span>
                     </a>
                     
                 </div>

@@ -6,7 +6,7 @@
   <link href="https://liukgg.github.io/atom.xml" rel="self"/>
   
   <link href="https://liukgg.github.io/"/>
-  <updated>2021-08-17T03:10:04.295Z</updated>
+  <updated>2021-08-29T14:42:08.921Z</updated>
   <id>https://liukgg.github.io/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CleanCode01</title>
+    <link href="https://liukgg.github.io/2021/08/29/cleancode/cleancode01/"/>
+    <id>https://liukgg.github.io/2021/08/29/cleancode/cleancode01/</id>
+    <published>2021-08-29T17:20:43.000Z</published>
+    <updated>2021-08-29T14:42:08.921Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;《代码整洁之道》学习笔记01-整洁代码&quot;&gt;&lt;a href=&quot;#《代码整洁之道》学习笔记01-整洁代码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程艺术" scheme="https://liukgg.github.io/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+    
+    <category term="编程艺术" scheme="https://liukgg.github.io/tags/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《管理者一定会遇到的那些事》学习笔记</title>
+    <link href="https://liukgg.github.io/2021/08/29/guan-li-zhe-yi-ding-hui-yu-dao-de-na-xie-shi-xue-xi-bi-ji/"/>
+    <id>https://liukgg.github.io/2021/08/29/guan-li-zhe-yi-ding-hui-yu-dao-de-na-xie-shi-xue-xi-bi-ji/</id>
+    <published>2021-08-29T16:53:02.000Z</published>
+    <updated>2021-08-29T14:42:08.921Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;《管理者一定会遇到的那些事》学习笔记&quot;&gt;&lt;a href=&quot;#《管理者一定会遇到的那些事》学习笔记&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术管理" scheme="https://liukgg.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="技术管理" scheme="https://liukgg.github.io/tags/%E6%8A%80%E6%9C%AF%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《编程一万小时的反思》阅读交流</title>
     <link href="https://liukgg.github.io/2021/08/16/theartofcode/bian-cheng-yi-wan-xiao-shi-de-fan-si-yue-du-jiao-liu/"/>
     <id>https://liukgg.github.io/2021/08/16/theartofcode/bian-cheng-yi-wan-xiao-shi-de-fan-si-yue-du-jiao-liu/</id>
     <published>2021-08-16T16:59:31.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -46,7 +96,7 @@
     <link href="https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/"/>
     <id>https://liukgg.github.io/2021/08/15/hexo/hexo-zai-matery-zhu-ti-xia-ji-cheng-utteranc-ping-lun-cha-jian/</id>
     <published>2021-08-15T21:15:06.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -71,7 +121,7 @@
     <link href="https://liukgg.github.io/2021/08/09/javacoretech/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/"/>
     <id>https://liukgg.github.io/2021/08/09/javacoretech/javacoretech-05-lei-ji-cheng-de-she-ji-ji-qiao/</id>
     <published>2021-08-09T08:28:47.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -101,7 +151,7 @@
     <link href="https://liukgg.github.io/2021/08/08/javacoretech/javacoretech-04-lei-she-ji-ji-qiao/"/>
     <id>https://liukgg.github.io/2021/08/08/javacoretech/javacoretech-04-lei-she-ji-ji-qiao/</id>
     <published>2021-08-08T21:09:11.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -127,7 +177,7 @@
     <link href="https://liukgg.github.io/2021/08/08/javacoretech/javacoretech-03-guan-yu-equals-fang-fa/"/>
     <id>https://liukgg.github.io/2021/08/08/javacoretech/javacoretech-03-guan-yu-equals-fang-fa/</id>
     <published>2021-08-08T20:00:55.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -153,7 +203,7 @@
     <link href="https://liukgg.github.io/2021/08/06/javacoretech/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/"/>
     <id>https://liukgg.github.io/2021/08/06/javacoretech/javacoretech-02-java-ji-ben-cheng-xu-she-ji-jie-gou-01/</id>
     <published>2021-08-06T16:23:29.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -178,7 +228,7 @@
     <link href="https://liukgg.github.io/2021/08/06/javacoretech/javacoretech-01-java-guan-jian-te-xing/"/>
     <id>https://liukgg.github.io/2021/08/06/javacoretech/javacoretech-01-java-guan-jian-te-xing/</id>
     <published>2021-08-06T10:27:35.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -203,7 +253,7 @@
     <link href="https://liukgg.github.io/2021/08/01/ying-xiang-li-mi-ma-xue-xi-bi-ji/"/>
     <id>https://liukgg.github.io/2021/08/01/ying-xiang-li-mi-ma-xue-xi-bi-ji/</id>
     <published>2021-08-01T10:00:00.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -228,7 +278,7 @@
     <link href="https://liukgg.github.io/2021/08/01/godoc-in-china/"/>
     <id>https://liukgg.github.io/2021/08/01/godoc-in-china/</id>
     <published>2021-08-01T09:00:00.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -253,7 +303,7 @@
     <link href="https://liukgg.github.io/2021/08/01/can-kao-zi-liao/"/>
     <id>https://liukgg.github.io/2021/08/01/can-kao-zi-liao/</id>
     <published>2021-08-01T08:00:00.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
@@ -278,7 +328,7 @@
     <link href="https://liukgg.github.io/2021/08/01/hexo/hello-world/"/>
     <id>https://liukgg.github.io/2021/08/01/hexo/hello-world/</id>
     <published>2021-08-01T06:00:00.000Z</published>
-    <updated>2021-08-17T03:10:04.295Z</updated>
+    <updated>2021-08-29T14:42:08.921Z</updated>
     
     
       
